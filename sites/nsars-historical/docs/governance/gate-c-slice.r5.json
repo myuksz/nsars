@@ -1,0 +1,48 @@
+{
+  "schema": "nsars-gate-c-slice-evaluation-v1",
+  "evaluation_id": "NSARS-R5-GATE-C-SLICE-001",
+  "evaluated_at": "2026-08-21",
+  "command_id": "NSARS-SITES-CMS-SLICE-R5-001",
+  "status": "PASS_FUNCTIONAL_SLICE_NOT_RELEASE_GATE",
+  "state_axes": {
+    "PRODUCED": "PASS",
+    "QA_PASS": "PASS_EXACT_SLICE_WITH_VIEWPORT_MATRIX_DEFERRED_TO_FULL_STAGE",
+    "APPROVED": "APPROVED_WITHIN_DELEGATED_SCOPE_NOT_DIRECT_SERGEY_APPROVAL",
+    "VERIFIED_RUNTIME": "PASS_INTERNAL_AGENT_PREVIEW_ONLY"
+  },
+  "evidence": {
+    "production_build": "PASS",
+    "typescript": "PASS",
+    "eslint": "PASS",
+    "contract_and_render_tests": "9_OF_9_PASS",
+    "d1_persisted_readback": "PASS_DRAFT_V2_OBSERVED",
+    "exact_draft_preview": "PASS_CONTROL_MARKER_OBSERVED_ONLY_IN_PREVIEW",
+    "immutable_publish": "PASS_REVISION_R2_CREATED",
+    "active_release_read": "PASS_R2_OBSERVED_ON_PUBLIC_RENDER",
+    "rollback": "PASS_ACTIVE_POINTER_R2_TO_R1_AND_PUBLIC_REVERSION_OBSERVED",
+    "repeat_publish_guard": "PASS_HTTP_409_VISIBLE_IN_ADMIN",
+    "post_test_clean_state": "PASS_DRAFT_V3_ACTIVE_R3_WITH_ORIGINAL_COPY",
+    "disabled_brief": "PASS_503_BODY_NOT_PARSED",
+    "anonymous_admin_api": "PASS_401",
+    "keyboard_focus": "PASS_SKIP_LINK_AND_VISIBLE_FOCUS_SEQUENCE",
+    "structural_accessibility": "PASS_ONE_H1_NO_DUPLICATE_IDS_NO_UNNAMED_CONTROLS",
+    "desktop_runtime": "PASS_1363_NO_HORIZONTAL_OVERFLOW",
+    "mobile_runtime": "DEFERRED_FULL_STAGE_MATRIX_320_360_390_768_1024_1440",
+    "real_screen_reader": "DEFERRED_MANDATORY_BEFORE_RELEASE"
+  },
+  "defects": [
+    {
+      "id": "GC-SLICE-001",
+      "severity": "P1",
+      "summary": "Locale-dependent revision timestamp caused a hydration mismatch.",
+      "resolution": "Replaced locale/timezone formatting with deterministic UTC formatting; recheck passed."
+    },
+    {
+      "id": "GC-SLICE-002",
+      "severity": "P3",
+      "summary": "Cloud-browser extension adds transient attributes before hydration.",
+      "resolution": "Classified as browser-extension instrumentation; no product DOM mismatch after deterministic timestamp fix."
+    }
+  ],
+  "release_claim": "FORBIDDEN"
+}

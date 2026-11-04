@@ -1,0 +1,37 @@
+{
+  "schema": "nsars-release-blockers-v1",
+  "register_id": "NSARS-R6-RELEASE-BLOCKERS-001",
+  "frozen_at": "2026-08-23",
+  "candidate_id": "NSARS-SITES-R6-CORRECTION-RC-001",
+  "public_release_state": "HOLD",
+  "blocking": [
+    {
+      "id": "R6-B01",
+      "summary": "No separate command to deploy or publish this candidate has been issued.",
+      "owner": "SERGEY",
+      "exit_evidence": "Explicit release command naming ns-ars.ru and this candidate."
+    },
+    {
+      "id": "R6-B02",
+      "summary": "Hosted checkpoint and exact-origin runtime verification have not been performed.",
+      "owner": "RELEASE",
+      "exit_evidence": "Verified checkpoint, bindings, authentication, routes and rollback evidence."
+    },
+    {
+      "id": "R6-B03",
+      "summary": "Real content, child-media rights, contacts, prices and final legal copy remain outside this correction release.",
+      "owner": "BUSINESS_CONTENT",
+      "exit_evidence": "Approved content and rights registers for every released dependency."
+    },
+    {
+      "id": "R6-B04",
+      "summary": "Real-device and real-screen-reader smoke tests remain mandatory before public release.",
+      "owner": "QA",
+      "exit_evidence": "Recorded device and assistive-technology results."
+    }
+  ],
+  "not_blocking_internal_candidate": [
+    "Inherited npm http-proxy deprecation warning",
+    "Node experimental-loader warning in the test harness"
+  ]
+}

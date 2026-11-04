@@ -1,0 +1,1 @@
+const fs=require('node:fs'),path=require('node:path');const config=path.resolve(__dirname,'../data/config.json');if(fs.existsSync(config))for(const [k,v] of Object.entries(JSON.parse(fs.readFileSync(config,'utf8'))))process.env[k]=String(v);import('./runtime/server.mjs');

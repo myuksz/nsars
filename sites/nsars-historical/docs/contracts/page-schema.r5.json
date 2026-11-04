@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ns-ars.ru/contracts/page-schema.r5.json",
+  "title": "NS-ARS Page Contract R5",
+  "type": "object",
+  "required": ["pageId","route","title","status","blocks","seo"],
+  "properties": {
+    "pageId": {"type":"string","pattern":"^page_[a-z0-9_]+$"},
+    "route": {"type":"string","pattern":"^/"},
+    "title": {"type":"string","minLength":1,"maxLength":120},
+    "status": {"enum":["DRAFT","REVIEW","PUBLISHED","ARCHIVED"]},
+    "taxonomies": {
+      "type":"object",
+      "properties": {
+        "age":{"enum":["none","kindergarten","grade4","highschool"]},
+        "visualLine":{"enum":["none","AIR","BASE","NIGHT"]},
+        "package":{"enum":["none","XS","M","PREMIUM"]},
+        "contentType":{"type":"string"},
+        "lifecycle":{"type":"string"}
+      },
+      "additionalProperties":false
+    },
+    "blocks": {
+      "type":"array",
+      "items": {
+        "type":"object",
+        "required":["blockId","type","schemaVersion","position","data","style"],
+        "properties": {
+          "blockId":{"type":"string"},
+          "type":{"enum":["nsars.hero","nsars.direction_selector","nsars.entity_listing","nsars.album_viewer","nsars.smart_gallery","nsars.mixed_slider","nsars.person_story","nsars.group_story","nsars.sticky_story","nsars.av_evidence","nsars.review_cta","nsars.rich_text","nsars.process","nsars.evidence","nsars.related","nsars.brief","nsars.footer","nsars.interactive_page_layout"]},
+          "schemaVersion":{"type":"string"},
+          "position":{"type":"integer","minimum":0},
+          "data":{"type":"object","propertyNames":{"not":{"pattern":"^(html|css|js|script|className|dangerouslySetInnerHTML)$"}}},
+          "style":{"$ref":"#/$defs/style"}
+        },
+        "additionalProperties":false
+      }
+    },
+    "seo": {
+      "type":"object",
+      "required":["title","description","indexing"],
+      "properties": {
+        "title":{"type":"string","minLength":1,"maxLength":70},
+        "description":{"type":"string","minLength":1,"maxLength":180},
+        "indexing":{"enum":["INDEX","NOINDEX"]},
+        "canonical":{"type":["string","null"]}
+      },
+      "additionalProperties":false
+    }
+  },
+  "$defs": {
+    "style": {
+      "type":"object",
+      "required":["theme","contentWidth","spacingTop","spacingBottom","fullBleed","visible","responsiveOverrides"],
+      "properties": {
+        "theme":{"enum":["paper","ink","petrol","ochre","red","cobalt"]},
+        "background":{"type":["string","null"]},
+        "surface":{"enum":["none","paper","ink","tint"]},
+        "contentWidth":{"enum":["narrow","standard","wide"]},
+        "spacingTop":{"enum":["none","s","m","l","xl"]},
+        "spacingBottom":{"enum":["none","s","m","l","xl"]},
+        "fullBleed":{"type":"boolean"},
+        "visible":{"type":"boolean"},
+        "responsiveOverrides":{"type":"object"}
+      },
+      "additionalProperties":false
+    }
+  },
+  "additionalProperties":false
+}

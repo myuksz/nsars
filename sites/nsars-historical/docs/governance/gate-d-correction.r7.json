@@ -1,0 +1,45 @@
+{
+  "schema": "nsars-gate-d-correction-v1",
+  "evaluation_id": "NSARS-R7-GATE-D-CORRECTION-001",
+  "evaluated_at": "2026-08-23",
+  "command_id": "NSARS-COMPOSER-R7-CORRECTION-001",
+  "scope": "URL-backed single-panel CMS page editor and same-site corrective release",
+  "status": "PASS_LOCAL_CORRECTION_RC_HOSTED_VERIFICATION_PENDING",
+  "evidence": {
+    "lint": "PASS",
+    "production_build": "PASS_VINEXT_5_OF_5",
+    "automated_tests": "24_OF_24_PASS",
+    "section_registry": "PASS_7_TYPED_IDS_WITH_SAFE_FALLBACK",
+    "single_panel_editor": "PASS_7_OF_7",
+    "section_url_state": "PASS",
+    "reload_restoration": "PASS",
+    "back_forward_restoration": "PASS",
+    "page_tab_section_preservation": "PASS",
+    "semantic_tabs": "PASS",
+    "application_console": "PASS_NO_APP_ERRORS"
+  },
+  "resolved_findings": [
+    {
+      "id": "R7-001",
+      "severity": "P1",
+      "summary": "The hosted editor still used hash links into one long document.",
+      "resolution": "Section selection is a typed URL state and only the selected panel is rendered."
+    },
+    {
+      "id": "R7-002",
+      "severity": "P1",
+      "summary": "The previous local result did not prove that the same candidate reached hosted runtime.",
+      "resolution": "R7 requires an immutable Sites checkpoint plus authoritative deployment status before handoff."
+    }
+  ],
+  "open_defects_within_scope": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 0
+  },
+  "release_gate": "CHECKPOINT_AND_EXACT_HOSTED_HANDOFF_REQUIRED",
+  "external_effects": false,
+  "checkpoint_deployment": false,
+  "production": false,
+  "dns": false
+}

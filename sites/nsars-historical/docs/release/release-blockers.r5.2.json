@@ -1,0 +1,80 @@
+{
+  "schema": "nsars-release-blockers-v1",
+  "register_id": "NSARS-R5-2-RELEASE-BLOCKERS-001",
+  "as_of": "2026-08-21",
+  "target_origin": "https://ns-ars.ru",
+  "checkpoint_state": "READY_TO_DEPLOY_PRIVATE_NOINDEX",
+  "public_release_state": "HOLD",
+  "blockers": [
+    {
+      "id": "RB-01",
+      "area": "real_media_rights",
+      "status": "OPEN_FOR_PUBLIC_RELEASE",
+      "current_control": "R2 originals remain draft-only; public revision requires APPROVED rights, READY lifecycle and VERIFIED_INDEPENDENT_COPY.",
+      "closure": "Every selected public asset has a traceable permission record, consent status and verified independent copy."
+    },
+    {
+      "id": "RB-02",
+      "area": "commercial_terms",
+      "status": "OPEN_FOR_PUBLIC_RELEASE",
+      "current_control": "XS, M and Premium appear only as non-price architecture; exact composition and prices are withheld.",
+      "closure": "One dated owner-approved source defines current package composition, prices, validity and conditions."
+    },
+    {
+      "id": "RB-03",
+      "area": "contacts_and_delivery",
+      "status": "OPEN_FOR_PUBLIC_RELEASE",
+      "current_control": "Contact API is disabled with 503 and does not parse request bodies.",
+      "closure": "Recipient, public channels, minimum form fields, retention, privacy notice and test delivery are verified."
+    },
+    {
+      "id": "RB-04",
+      "area": "legal",
+      "status": "OPEN_FOR_PUBLIC_RELEASE",
+      "current_control": "The legal route reports pre-release status and does not pretend to be an approved policy or offer.",
+      "closure": "Verified business details and feature-matched privacy, consent, offer and publication rules are approved."
+    },
+    {
+      "id": "RB-05",
+      "area": "admin_access",
+      "status": "CONFIGURED_AWAITING_HOSTED_LOGIN_CHECK",
+      "current_control": "Sites access is custom owner-only and NSARS_ADMIN_EMAILS is set to the exact project owner email.",
+      "closure": "Owner login, draft save, preview, publish and rollback pass on the hosted checkpoint; anonymous access remains denied."
+    },
+    {
+      "id": "RB-06",
+      "area": "accessibility_and_real_devices",
+      "status": "OPEN_FOR_PUBLIC_RELEASE",
+      "current_control": "Automated structural, keyboard-boundary and responsive checks pass; real assistive-technology review is still pending.",
+      "closure": "Owner-content pages and editor pass real-device smoke and VoiceOver or NVDA review with no P0/P1 defect."
+    },
+    {
+      "id": "RB-07",
+      "area": "initial_checkpoint_recovery",
+      "status": "CONTROLLED_INITIAL_EMPTY_STATE",
+      "current_control": "Project has no prior site version and no real media; the checkpoint remains owner-only and the custom domain is not attached.",
+      "closure": "After real content is added, record D1 export, R2 inventory and a tested rollback version before domain cutover."
+    },
+    {
+      "id": "RB-08",
+      "area": "hosting_runtime",
+      "status": "READY_FOR_AUTHORIZED_CHECKPOINT",
+      "current_control": "D1 DB and R2 BUCKET bindings are declared; source passed build, TypeScript, ESLint and 20 automated tests.",
+      "closure": "The exact candidate deploys successfully and returns expected noindex/security behavior with no runtime error."
+    },
+    {
+      "id": "RB-09",
+      "area": "domain_dns_tls",
+      "status": "DEFERRED_UNTIL_CHECKPOINT_REVIEW",
+      "current_control": "Beget DNS and mail records are preserved; old public_html is empty; no web record has been switched.",
+      "closure": "Owner approves the hosted checkpoint, then exact web records change without touching MX/SPF and the exact origin passes TLS/HTTP checks."
+    },
+    {
+      "id": "RB-10",
+      "area": "authority",
+      "status": "CHECKPOINT_AUTHORIZED_DOMAIN_CUTOVER_DEFERRED",
+      "current_control": "Owner explicitly instructed deletion, autonomous continuation and placement; checkpoint remains private and noindex.",
+      "closure": "Use the owner's post-checkpoint decision before custom-domain/DNS cutover and a separate final decision before indexing."
+    }
+  ]
+}

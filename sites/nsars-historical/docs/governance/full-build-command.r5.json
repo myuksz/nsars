@@ -1,0 +1,52 @@
+{
+  "schema": "nsars-full-synthetic-source-command-v1",
+  "Full_Build_Command_ID": "NSARS-SITES-FULL-SYNTHETIC-R5-001",
+  "issued_at": "2026-08-21",
+  "authority_basis": "CURRENT_USER_DELEGATION_RECORDED_IN_DECISION_R5_002",
+  "pins": {
+    "decision": {"path":"docs/governance/DECISION_R5_002_FULL_SYNTHETIC.md","sha256":"105d728a22b25d9fb229626ad235b32e7988f4af6c0b686235bfecb6fd3ae56f"},
+    "block_registry": {"path":"docs/contracts/block-registry.r5.1.json","sha256":"065b1cfa1daa9723849845184ffcf5e88b7b57d2e0ffd2ea0aee384b7923eeda"},
+    "route_manifest": {"path":"docs/contracts/full-route-manifest.r5.json","sha256":"a9bc87cbb6136e7c81a293651a1235934b34da62cc5f3e7b32bf003a30324e2b"},
+    "audit": {"path":"docs/governance/full-build-audit.r5.json","sha256":"7ff71762dceb1ac8b0623c505881073a0a9e14388d874fb4e4ab6496bdc9cac0"},
+    "gate_b": {"path":"docs/governance/gate-b-full-synthetic.r5.json","sha256":"d45cef8ed6fec1ec624903a38365b67ca0b6984880a41bfb42d3c559ac6b5af2","required_status":"PASS_PRECODE_FOR_EXACT_FULL_SYNTHETIC_BUILD"},
+    "gate_c_slice": {"path":"docs/governance/gate-c-slice.r5.json","sha256":"907f5bde4b9c2aa4d8eb0a740782a3d083ec9be60dcf23bab6bc155082a87692"},
+    "pre_full_source_fingerprint": "aa3cafd4a4833044727fbf68adf19bd8fd92d2dc47e91a2ac5d598f26d300efa"
+  },
+  "authorization": {
+    "source_writes": true,
+    "local_build": true,
+    "d1_synthetic_state": true,
+    "r2_synthetic_assets": true,
+    "internal_agent_preview": true,
+    "checkpoint_deployment": false,
+    "production": false,
+    "dns": false,
+    "custom_domain": false,
+    "external_product_network_calls": false,
+    "real_contact_delivery": false,
+    "real_personal_data": false,
+    "real_child_media": false,
+    "prices_geography_reviews_real_claims": false,
+    "secrets": false,
+    "ns_ars_production_ru_mutation": false
+  },
+  "included_scope": [
+    "nine exact synthetic public routes and custom 404",
+    "global navigation and responsive editorial variants",
+    "per-page D1 drafts revisions active pointers preview publish rollback",
+    "Russian CMS page selection and structured fields",
+    "robots sitemap security and disabled brief boundary",
+    "internal build test responsive accessibility and CMS E2E"
+  ],
+  "exit": {
+    "production_build": "PASS_REQUIRED",
+    "contract_and_route_tests": "PASS_REQUIRED",
+    "cms_multiroute_e2e": "PASS_REQUIRED",
+    "responsive_matrix": "PASS_REQUIRED_OR_EXPLICIT_NON_RELEASE_BLOCKER",
+    "automated_accessibility": "PASS_REQUIRED",
+    "p0": 0,
+    "p1": 0,
+    "release_claim": "FORBIDDEN"
+  },
+  "command_state": "ISSUED_AND_CONSUMED_FOR_ONE_FULL_SYNTHETIC_BUILD_START"
+}

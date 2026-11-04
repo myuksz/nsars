@@ -1,0 +1,12 @@
+import {spawn} from 'node:child_process';
+import {db} from './cms.mjs';
+const email=/^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+export const emailConfigured=()=>email.test(process.env.ORDER_EMAIL_TO||'')&&email.test(process.env.ORDER_EMAIL_FROM||'')&&!!process.env.SENDMAIL_PATH;
+export async function notifyOrder(id){if(!emailConfigured())return;const now=new Date().toISOString(),stale=new Date(Date.now()-120000).toISOString();const claimed=await db().prepare("UPDATE moscow_order_notifications SET state='sending',attempts=attempts+1,updated=? WHERE order_id=? AND (state IN ('pending','failed') OR (state='sending' AND updated<?))").bind(now,id,stale).run();if(!claimed.meta.changes)return;
+ try{const row=await db().prepare('SELECT number,body,created FROM moscow_orders WHERE id=?').bind(id).first();if(!row)throw Error();const b=JSON.parse(row.body),from=process.env.ORDER_EMAIL_FROM,to=process.env.ORDER_EMAIL_TO;
+ const text=['Новый заказ '+row.number,new Date(row.created).toLocaleString('ru-RU',{timeZone:'Europe/Moscow'}),b.productName,[b.design,b.variant,b.cover,b.format].filter(Boolean).join(' · '),'Количество: '+b.quantity,'Предварительная стоимость: '+(b.total==null?'По запросу':b.total+' ₽'),'',...b.fields.map(f=>f.label+': '+f.value),'','Заказы: https://ns-ars.ru/admin','Заказ получен. Подтверждение условий выполняется отдельно.'].join('\n');
+ const subject='=?UTF-8?B?'+Buffer.from('Новый заказ '+row.number).toString('base64')+'?=';
+ const message=['From: '+from,'To: '+to,'Subject: '+subject,'Date: '+new Date().toUTCString(),'Message-ID: <order-'+id+'@ns-ars.ru>','MIME-Version: 1.0','Content-Type: text/plain; charset=UTF-8','Content-Transfer-Encoding: base64','',Buffer.from(text).toString('base64').match(/.{1,76}/g).join('\r\n'),''].join('\r\n');
+ await new Promise((resolve,reject)=>{const child=spawn(process.env.SENDMAIL_PATH,['-t','-i','-f',from],{stdio:['pipe','ignore','ignore'],timeout:15000});child.on('error',reject);child.on('close',code=>code===0?resolve():reject(Error('MAIL_REJECTED')));child.stdin.on('error',()=>{});child.stdin.end(message);});
+ await db().prepare("UPDATE moscow_order_notifications SET state='sent',provider_id=?,last_error='',updated=? WHERE order_id=?").bind('sendmail:'+id,new Date().toISOString(),id).run();
+ }catch{await db().prepare("UPDATE moscow_order_notifications SET state='failed',last_error='SENDMAIL_FAILED',updated=? WHERE order_id=?").bind(new Date().toISOString(),id).run();}}

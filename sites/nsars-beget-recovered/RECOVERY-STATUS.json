@@ -1,0 +1,75 @@
+{
+  "status": "INCOMPLETE_NOT_RUNNABLE",
+  "baseline_date": "2026-10-29",
+  "archive_sha256": "e50c1a530e460b068a7b5d7f112df41c51818e75ae17aa1bbd01d533cd73a3c2",
+  "missing_imports": [
+    {
+      "importer": "lib/moscow/configuration.mjs",
+      "missing": "lib/moscow/services-seed.json"
+    },
+    {
+      "importer": "lib/moscow/configuration.mjs",
+      "missing": "lib/moscow/shooting-seed.json"
+    },
+    {
+      "importer": "lib/moscow/configuration.mjs",
+      "missing": "lib/moscow/preparation-seed.json"
+    },
+    {
+      "importer": "lib/moscow/configuration.mjs",
+      "missing": "lib/moscow/releases-seed.json"
+    },
+    {
+      "importer": "lib/moscow/configuration.mjs",
+      "missing": "lib/moscow/sections-seed.json"
+    },
+    {
+      "importer": "lib/moscow/configuration.mjs",
+      "missing": "lib/moscow/faq-seed.json"
+    },
+    {
+      "importer": "lib/moscow/configuration.mjs",
+      "missing": "lib/moscow/faq-moscow.json"
+    },
+    {
+      "importer": "lib/moscow/configuration.mjs",
+      "missing": "lib/moscow/catalog.json"
+    },
+    {
+      "importer": "lib/moscow/configuration.mjs",
+      "missing": "lib/moscow/direction-slides.json"
+    },
+    {
+      "importer": "lib/moscow/configuration.mjs",
+      "missing": "lib/moscow/shop-seed.json"
+    },
+    {
+      "importer": "lib/moscow/data.mjs",
+      "missing": "lib/moscow-content.mjs"
+    },
+    {
+      "importer": "lib/moscow/legal-reviews-view.mjs",
+      "missing": "lib/moscow/review-images.json"
+    },
+    {
+      "importer": "lib/moscow/render.mjs",
+      "missing": "lib/moscow/preparation-seed.json"
+    },
+    {
+      "importer": "lib/moscow/portfolio-view.mjs",
+      "missing": "lib/moscow/portfolio-local-sizes.json"
+    },
+    {
+      "importer": "lib/moscow/services-view.mjs",
+      "missing": "lib/moscow/shooting-seed.json"
+    }
+  ],
+  "not_included": [
+    "working CMS database",
+    "customer data",
+    "secrets",
+    "photos",
+    "videos",
+    "current live-site verification"
+  ]
+}

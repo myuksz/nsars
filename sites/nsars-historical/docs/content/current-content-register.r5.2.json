@@ -1,0 +1,22 @@
+{
+  "schema": "nsars-content-register-v1",
+  "register_id": "NSARS-CONTENT-R5-2-001",
+  "observed_at": "2026-08-21",
+  "approved_public_facts": [
+    "Дом детской фотографии Арсюткиной Наталии",
+    "Наталия — основной фотограф и автор бренда",
+    "возрастные направления: детский сад, 4 класс, 9–11 классы",
+    "ценности: бережное взаимодействие, индивидуальность ребёнка, живые эмоции, художественная целостность, контроль качества",
+    "рабочие оси: AIR/BASE/NIGHT и XS/M/Premium без публикации конфликтующих составов и цен"
+  ],
+  "held_public_facts": [
+    "prices_and_exact_package_composition",
+    "geography",
+    "contact_channels",
+    "AR_capability_claims",
+    "legal_texts_and_publication_rights",
+    "real_child_media"
+  ],
+  "content_origin": "NEW_ORIGINAL_COPY_FROM_CURRENT_APPROVED_BUSINESS_BASELINE",
+  "old_site_code_design_structure_reuse": false
+}

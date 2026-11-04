@@ -1,0 +1,57 @@
+{
+  "schema": "nsars-current-evidence-ledger-v1",
+  "ledger_id": "NSARS-SITE-R6-CURRENT-LEDGER-001",
+  "frozen_at": "2026-08-23",
+  "supersedes": "docs/governance/current-evidence-ledger.r5.json",
+  "authority": {
+    "direct_user_command": "Делай все",
+    "command_record": "docs/governance/correction-command.r6.json",
+    "production_authority": false
+  },
+  "input_evidence": [
+    {
+      "id": "R6-UI-TABS",
+      "name": "composer-page-tabs.png",
+      "sha256": "b52ee16331f8377e5746e197ffdf6f46fa0f3f33ebacefd2af3382a6afa4f008",
+      "disposition": "TRUE_PAGE_NAVIGATION_REQUIRED"
+    },
+    {
+      "id": "R6-UI-RAIL",
+      "name": "composer-structure-rail.png",
+      "sha256": "2f1607c9450d5f00846ef34e6c76812a2df01823eaee18384707a10e797ae084",
+      "disposition": "ONE_ACTIVE_SECTION_REQUIRED"
+    }
+  ],
+  "implemented_contract": "docs/contracts/site-cms-contract.r6.json",
+  "verified_evidence": {
+    "eslint": "PASS",
+    "vinext_build": "PASS_5_OF_5",
+    "automated_tests": "PASS_23_OF_23",
+    "public_routes": "PASS_9_OF_9_PLUS_CUSTOM_404",
+    "public_responsive": "PASS_54_OF_54_AT_320_360_390_768_1024_1440",
+    "admin_responsive": "PASS_6_OF_6_AT_320_360_390_768_1024_1440",
+    "horizontal_overflow": "PASS_ZERO_DOCUMENT_FAILURES",
+    "page_switch": "PASS_URL_H1_FIELD_ACTIVE_TAB_AND_SINGLE_SECTION",
+    "dirty_guard": "PASS_STAY_DISCARD_AND_SAVE_AND_GO",
+    "hidden_page": "PASS_CREATE_HIDDEN_NO_PUBLIC_MENU_AND_404",
+    "hidden_revision": "PASS_ACTIVE_REVISION_REMAINS_PUBLIC_404_UNTIL_VISIBILITY_GATE",
+    "navigation_revision_cycle": "PASS_SAVE_PUBLISH_PUBLIC_READBACK_ROLLBACK",
+    "admin_api_anonymous_boundary": "PASS_401_FOR_PAGE_PAGES_MENU_VISIBILITY",
+    "application_console": "PASS_NO_TERMINAL_LOCAL_ERRORS_OR_WARNINGS"
+  },
+  "state_axes": {
+    "produced": true,
+    "static_qa": "PASS",
+    "browser_qa": "PASS_LOCAL_AGENT_PREVIEW",
+    "approved_for_correction_scope": true,
+    "verified_hosted_runtime": false,
+    "checkpoint_deployed": false,
+    "production_released": false
+  },
+  "permanent_no_touch": [
+    "ns-ars-production.ru",
+    "*.ns-ars-production.ru"
+  ],
+  "target_origin": "https://ns-ars.ru",
+  "external_effects": false
+}

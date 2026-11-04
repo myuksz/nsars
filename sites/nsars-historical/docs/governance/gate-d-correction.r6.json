@@ -1,0 +1,69 @@
+{
+  "schema": "nsars-gate-d-correction-v1",
+  "evaluation_id": "NSARS-R6-GATE-D-CORRECTION-001",
+  "evaluated_at": "2026-08-23",
+  "command_id": "NSARS-COMPOSER-R6-CORRECTION-001",
+  "scope": "Route-isolated CMS, hidden page creation, typed versioned navigation, public brand and responsive correction",
+  "status": "PASS_INTERNAL_CORRECTION_RC_RELEASE_HOLD",
+  "evidence": {
+    "lint": "PASS",
+    "production_build": "PASS_VINEXT_5_OF_5",
+    "automated_tests": "23_OF_23_PASS",
+    "migration": "PASS_DRIZZLE_0002_TRICKY_DRACULA",
+    "page_isolation": "PASS",
+    "unsaved_change_protection": "PASS",
+    "single_panel_editor": "PASS",
+    "hidden_page_creation": "PASS",
+    "separate_visibility_gate": "PASS",
+    "typed_navigation": "PASS",
+    "navigation_revision_and_rollback": "PASS",
+    "common_header_mark_removed": "PASS",
+    "decorative_numbering_removed": "PASS",
+    "semantic_process_01_04_retained": "PASS",
+    "public_responsive": "PASS_54_OF_54_ZERO_OVERFLOW",
+    "admin_responsive": "PASS_6_OF_6_ZERO_OVERFLOW_AND_WRAPPED_TABS",
+    "application_console": "PASS_NO_APP_ERRORS_OR_WARNINGS"
+  },
+  "resolved_findings": [
+    {
+      "id": "R6-001",
+      "severity": "P1",
+      "summary": "Page tabs acted as pointers into one long document.",
+      "resolution": "Each page now has a distinct editor URL and isolated document snapshot."
+    },
+    {
+      "id": "R6-002",
+      "severity": "P1",
+      "summary": "Page switching could discard unsaved edits silently.",
+      "resolution": "Dirty-state guard offers save-and-go, discard-and-go, or stay; browser history is guarded."
+    },
+    {
+      "id": "R6-003",
+      "severity": "P1",
+      "summary": "Page creation and site navigation had no persistent first-class model.",
+      "resolution": "Hidden dynamic pages and typed versioned navigation were added to D1."
+    },
+    {
+      "id": "R6-004",
+      "severity": "P2",
+      "summary": "Public header retained an unwanted common NS—ARS mark and duplicate decorative numbering.",
+      "resolution": "The header mark and decorative indices were removed; only process steps 01–04 remain."
+    },
+    {
+      "id": "R6-005",
+      "severity": "P1",
+      "summary": "Responsive failures were masked by document clipping and horizontally scrolling menus.",
+      "resolution": "Intrinsic geometry and menu wrapping were corrected; document clipping was removed."
+    }
+  ],
+  "open_defects_within_scope": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 0
+  },
+  "release_gate": "HOLD_SEPARATE_DEPLOY_COMMAND_AND_HOSTED_RUNTIME_VERIFICATION",
+  "external_effects": false,
+  "checkpoint_deployment": false,
+  "production": false,
+  "dns": false
+}

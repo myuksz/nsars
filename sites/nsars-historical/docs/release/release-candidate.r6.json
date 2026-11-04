@@ -1,0 +1,59 @@
+{
+  "schema": "nsars-release-candidate-v1",
+  "candidate_id": "NSARS-SITES-R6-CORRECTION-RC-001",
+  "created_at": "2026-08-23",
+  "target_origin": "https://ns-ars.ru",
+  "source_fingerprint": {
+    "algorithm": "sha256(sorted sha256 per in-scope file)",
+    "value": "15728d57c349b7c0b2f61fac4b07e2597582b03d5445caeb9efe5f3513e9ed44",
+    "command": "scripts/release-fingerprint.sh",
+    "scope_note": "docs/release is excluded to avoid recursive signatures"
+  },
+  "state_axes": {
+    "PRODUCED": "PASS_R6_ROUTE_ISOLATED_CMS_AND_PUBLIC_CORRECTION",
+    "QA_PASS": "PASS_23_OF_23_PLUS_60_BROWSER_VIEWPORT_STATES",
+    "APPROVED": "AUTHORIZED_FOR_CORRECTION_SCOPE_BY_DIRECT_USER_COMMAND",
+    "VERIFIED_RUNTIME": "PASS_LOCAL_AGENT_PREVIEW_ONLY_HOSTED_PENDING"
+  },
+  "candidate_class": "LOCAL_RELEASE_CANDIDATE_NOINDEX_HOLD",
+  "public_release_state": "HOLD",
+  "build": {
+    "eslint": "PASS",
+    "vinext_build": "PASS_5_OF_5",
+    "tests": "PASS_23_OF_23"
+  },
+  "browser_qa": {
+    "public": "PASS_9_ROUTES_X_6_WIDTHS_ZERO_DOCUMENT_OVERFLOW",
+    "admin": "PASS_6_WIDTHS_ZERO_DOCUMENT_OVERFLOW_WRAPPED_TABS",
+    "page_workflow": "PASS_SWITCH_DIRTY_GUARD_CREATE_HIDDEN_SAVE_AND_GO_PUBLISH_STILL_HIDDEN",
+    "menu_workflow": "PASS_SAVE_PUBLISH_PUBLIC_READBACK_ROLLBACK",
+    "media_work_area": "PASS_SEPARATE_ROUTE_AND_UPLOAD_FORM",
+    "application_console": "PASS"
+  },
+  "runtime_contract": {
+    "public_routes": 9,
+    "page_editor": "ROUTE_ISOLATED_ONE_PAGE_ONE_ACTIVE_SECTION",
+    "page_creation": "DUPLICATED_HIDDEN_DRAFT",
+    "public_visibility": "SEPARATE_GATE_REQUIRES_ACTIVE_REVISION",
+    "navigation": "TYPED_D1_DRAFT_IMMUTABLE_REVISION_ACTIVE_POINTER_ROLLBACK",
+    "media": "SEPARATE_R2_D1_WORK_AREA_WITH_RIGHTS_GATE",
+    "admin": "SIWC_EXACT_ALLOWLIST_DEFAULT_DENY",
+    "indexing": "DISALLOW_ALL_PLUS_NOINDEX",
+    "cache": "NO_STORE"
+  },
+  "migration": "drizzle/0002_tricky_dracula.sql",
+  "evidence": [
+    "docs/contracts/site-cms-contract.r6.json",
+    "docs/governance/current-evidence-ledger.r6.json",
+    "docs/governance/gate-d-correction.r6.json"
+  ],
+  "open_blocker_register": "docs/release/release-blockers.r6.json",
+  "placement": {
+    "checkpoint": "NOT_DEPLOYED",
+    "custom_domain": "NOT_CHANGED",
+    "dns": "PRESERVED",
+    "mail": "PRESERVED",
+    "forbidden_old_origin": "UNTOUCHED"
+  },
+  "next_authorized_action": "WAIT_FOR_SEPARATE_EXPLICIT_RELEASE_COMMAND"
+}

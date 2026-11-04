@@ -1,0 +1,23 @@
+import shootingSeed from './shooting-seed.json' with {type:'json'};
+import {productPrice,money} from '../../public/moscow/shop-model.mjs';
+const paragraphs=(t,esc)=>t.split(/\n\s*\n/).filter(x=>x.trim()).map(p=>`<p>${esc(p).replaceAll('\n','<br>')}</p>`).join('');
+export function servicesView(s,url,{esc,link,btn}){
+ const slug=url.pathname.split('/')[3],page=s.servicePages.find(p=>p.slug===slug);
+ if(slug&&!page)return {status:404,pageTitle:'Страница не найдена',body:''};
+ const tabs=`<div class="service-tabs">${s.servicePages.map(p=>link('photoshoots/'+p.slug,esc(p.title),'chip'+(p===page?' active':''))).join('')}</div>`;
+ if(!page)return {status:200,pageTitle:'Фотоуслуги',body:`<section class="wrap section"><header class="page-title"><p class="eyebrow">Дом детской фотографии</p><h1>Фотоуслуги</h1><p class="lead">Фотосессии для себя, семьи и бизнеса — и подарочные сертификаты для близких.</p></header><div class="service-hub">${s.servicePages.map(p=>link('photoshoots/'+p.slug,`<img src="${esc(p.items[0].images[0])}" alt="${esc(p.title)}" loading="lazy"><h2>${esc(p.title)} <span aria-hidden="true">↗</span></h2><p>${p.slug==='certificates'?'Три варианта подарка с фотографиями, фотокнигой и дополненной реальностью':'Студия, природа, дом, личный бренд, события и реклама'}</p>`,'service-hub-card')).join('')}</div></section>`};
+ const gallery=(item)=>`<div class="album-viewer service-gallery" data-slider ${item.images.length>1?'data-random-autoplay':''}><div class="slides">${item.images.map((src,i)=>`<figure class="slide" ${i?'hidden':''}><img ${i?'data-gallery-src':'src'}="${esc(src)}" alt="${esc(item.title)} — фотография ${i+1}" loading="lazy" decoding="async"></figure>`).join('')}</div>${item.images.length>1?`<div class="slider-controls"><button type="button" data-prev aria-label="Предыдущая фотография">←</button><span data-counter aria-live="off">1 / ${item.images.length}</span><button type="button" data-next aria-label="Следующая фотография">→</button><button type="button" data-zoom aria-label="Увеличить фотографию">⤢</button></div>`:''}</div>`;
+ return {status:200,pageTitle:page.title,body:`<section class="wrap section service-page"><header class="page-title"><p class="eyebrow">Фотоуслуги</p><h1>${esc(page.title)}</h1></header>${tabs}<div class="service-intro prose">${paragraphs(page.intro,esc)}</div><div class="service-items ${slug==='certificates'?'certificate-items':''}">${page.items.map(item=>{
+ const p=s.shop.products.find(p=>p.id===item.productId),price=p?productPrice(s,p):null;
+ const action=p?(p.available?btn('product/'+p.id,slug==='certificates'?'Заказать сертификат':'Заказать съёмку').replace('<a ','<a data-order-card '):link('contacts','Уточнить доступность','text-link')):'';
+ return `<article class="service-item">${item.images.length?gallery(item):''}<div class="service-copy"><h2>${esc(item.title)}</h2><div class="prose">${paragraphs(item.text,esc)}</div>${p?`<p class="service-price">${['wf-51131','wf-51127'].includes(p.id)?'от ':''}${esc(money(price))}${p.id==='wf-51128'?' + аренда студии':''}</p>`:''}${action}</div></article>`;
+ }).join('')}</div>${page.outro?`<div class="service-outro prose">${paragraphs(page.outro,esc)}</div>`:''}</section>`};
+}
+export function shootingView(s,url,{esc,link,btn}){
+ const kind=url.pathname.split('/')[3],layout=shootingSeed.find(p=>p.slug===kind);
+ if(kind&&!layout)return {status:404,pageTitle:'Страница не найдена',body:''};
+ const tabs=`<div class="preparation-tabs">${shootingSeed.map(p=>link('shooting/'+p.slug,esc(p.title),'chip'+(p.slug===kind?' active':''))).join('')}${link('preparation','Подготовка к съёмке','chip',{kind:kind||'school'})}</div>`;
+ if(!layout)return {status:200,pageTitle:'Съёмка и подготовка',body:`<section class="wrap section"><header class="page-title"><p class="eyebrow">До встречи с фотографом</p><h1>Съёмка и подготовка</h1></header><div class="shooting-hub">${shootingSeed.map(p=>`<article class="shooting-hub-card"><h2>${esc(p.title)}</h2><p>${p.slug==='kindergarten'?'От завтрака и портретов до прогулки и тихого часа':'Образы, портреты, друзья и история класса'}</p>${btn('shooting/'+p.slug,'Как проходит съёмка')}${link('preparation','Как подготовиться →','text-link',{kind:p.slug})}</article>`).join('')}</div></section>`};
+ const data=s.shooting.find(p=>p.slug===kind)||layout;
+ return {status:200,pageTitle:data.title,body:`<div class="wrap preparation-guide shooting-guide">${tabs}${layout.template.replace(/\{\{(\d+)\}\}/g,(_,i)=>esc(data.copy[i]??layout.copy[i]))}<div class="shooting-next">${btn('preparation','Подготовиться к съёмке',{kind})}${link('designs','Выбрать дизайн альбома →','text-link',{age:kind==='kindergarten'?'kindergarten':'senior'})}</div></div>`};
+}

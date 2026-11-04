@@ -1,0 +1,19 @@
+{
+  "schema": "nsars-block-registry-v1",
+  "registry_id": "NSARS-BLOCK-REGISTRY-R5-2-001",
+  "schema_version": "1.2.0-rc.1",
+  "supersedes": "docs/contracts/block-registry.r5.1.json",
+  "raw_html_css_js": "FORBIDDEN",
+  "required_singletons": ["nsars.hero", "nsars.rich_text", "nsars.process", "nsars.related", "nsars.footer"],
+  "repeatable": ["nsars.smart_gallery", "nsars.mixed_slider", "nsars.interactive_page_layout"],
+  "blocks": [
+    {"id":"BR01","type":"nsars.hero","status":"CMS_PUBLIC_ENABLED","media_gate":"NOT_APPLICABLE","fields":["eyebrow","title","accent","body","primaryCta","secondaryCta","visualMode"]},
+    {"id":"BR05","type":"nsars.smart_gallery","status":"CMS_DRAFT_PREVIEW_ENABLED","media_gate":"PUBLIC_REQUIRES_APPROVED_READY_MEDIA","fields":["heading","body","mediaIds","layout","density","lightbox"]},
+    {"id":"BR06","type":"nsars.mixed_slider","status":"CMS_DRAFT_PREVIEW_ENABLED","media_gate":"PUBLIC_REQUIRES_APPROVED_READY_MEDIA","fields":["heading","body","mediaIds","framePolicy","captions","controls","intervalSeconds"]},
+    {"id":"BR12","type":"nsars.rich_text","status":"CMS_PUBLIC_ENABLED","media_gate":"NOT_APPLICABLE","fields":["kicker","heading","body","alignment"]},
+    {"id":"BR13","type":"nsars.process","status":"CMS_PUBLIC_ENABLED","media_gate":"NOT_APPLICABLE","fields":["heading","steps"]},
+    {"id":"BR15","type":"nsars.related","status":"CMS_PUBLIC_ENABLED","media_gate":"NOT_APPLICABLE","fields":["heading","items"]},
+    {"id":"BR17","type":"nsars.footer","status":"CMS_PUBLIC_ENABLED","media_gate":"NOT_APPLICABLE","fields":["brand","navigation","legalStatus"]},
+    {"id":"BR18","type":"nsars.interactive_page_layout","status":"CMS_DRAFT_PREVIEW_ENABLED","media_gate":"PUBLIC_REQUIRES_APPROVED_READY_MEDIA","fields":["heading","body","backgroundMediaId","photoWindows","intervalSeconds","accessibleName"]}
+  ]
+}

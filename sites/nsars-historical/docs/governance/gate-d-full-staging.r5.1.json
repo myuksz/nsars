@@ -1,0 +1,88 @@
+{
+  "schema": "nsars-gate-d-full-staging-v1",
+  "evaluation_id": "NSARS-R5-1-GATE-D-FULL-STAGING-001",
+  "evaluated_at": "2026-08-21",
+  "command_id": "NSARS-SITES-FULL-SYNTHETIC-R5-001",
+  "scope": "Nine-route synthetic public site, Russian CMS and local placement-preparation runtime",
+  "status": "PASS_INTERNAL_SYNTHETIC_RC_RELEASE_HOLD",
+  "state_axes": {
+    "PRODUCED": "PASS_FULL_SYNTHETIC_R5_1",
+    "QA_PASS": "PASS_INTERNAL_AUTOMATED_AND_AGENT_PREVIEW",
+    "APPROVED": "APPROVED_WITHIN_DELEGATED_SCOPE_NOT_DIRECT_SERGEY_APPROVAL",
+    "VERIFIED_RUNTIME": "PASS_INTERNAL_AGENT_PREVIEW_ONLY_NOT_CHECKPOINT_NOT_PRODUCTION"
+  },
+  "evidence": {
+    "typescript": "PASS",
+    "eslint": "PASS",
+    "production_build": "PASS_VINEXT_5_OF_5",
+    "automated_tests": "17_OF_17_PASS",
+    "public_routes": "9_OF_9_PASS_PLUS_CUSTOM_404",
+    "internal_link_targets": "PASS_ALL_REGISTERED_AND_REACHABLE",
+    "robots": "PASS_DIRECT_200_DISALLOW_ALL_CANONICAL_SITEMAP_ONLY",
+    "sitemap": "PASS_9_ROUTES_NOINDEX",
+    "security_headers": "PASS_CSP_XFO_NOSNIFF_NO_STORE_NOINDEX",
+    "forbidden_host": "PASS_421_EXACT_AND_SUBDOMAIN",
+    "brief_boundary": "PASS_503_BODY_NOT_PARSED",
+    "admin_anonymous_boundary": "PASS_401",
+    "responsive_runtime": "PASS_54_OF_54_STATES_AT_320_360_390_768_1024_1440",
+    "horizontal_overflow": "PASS_ZERO_FAILURES",
+    "runtime_content_source": "PASS_D1_ACTIVE_RELEASE_54_OF_54",
+    "cms_pages": "PASS_9_OF_9_R1_ACTIVE_NAMED_CONTROLS",
+    "keyboard": "PASS_9_OF_9_SKIP_LINK_VISIBLE_FOCUS_AND_MAIN_TARGET",
+    "interactive_target_minimum": "PASS_9_OF_9_AT_320PX_NO_VISIBLE_TARGET_BELOW_24PX",
+    "cms_revision_cycle": "PASS_DRAFT_READBACK_PREVIEW_PUBLISH_ROLLBACK_REPEAT_GUARD_RESTORE",
+    "local_d1_clean_seed": "PASS_9_PAGES_ACTIVE_R1",
+    "real_screen_reader": "PENDING_MANDATORY_BEFORE_PUBLIC_RELEASE",
+    "real_device_smoke": "PENDING_MANDATORY_BEFORE_PUBLIC_RELEASE"
+  },
+  "resolved_findings": [
+    {
+      "id": "GD-001",
+      "severity": "P1",
+      "summary": "Locale-dependent CMS timestamp caused hydration divergence.",
+      "resolution": "Deterministic UTC formatting; runtime recheck passed."
+    },
+    {
+      "id": "GD-002",
+      "severity": "P2",
+      "summary": "Medium-width direction cards changed density abruptly.",
+      "resolution": "Container-aware auto-fit grid; 54-state overflow recheck passed."
+    },
+    {
+      "id": "GD-003",
+      "severity": "P2",
+      "summary": "Global navigation was labelled as in-page navigation.",
+      "resolution": "Accessible name changed to Основные разделы on every page."
+    },
+    {
+      "id": "GD-004",
+      "severity": "P1",
+      "summary": "The framework redirected the standard robots path because of trailing-slash policy.",
+      "resolution": "Worker now returns direct robots.txt HTTP 200 on both path variants."
+    },
+    {
+      "id": "GD-005",
+      "severity": "P2",
+      "summary": "A failed first D1 initialization could pin a rejected promise for the worker isolate.",
+      "resolution": "Rejected initialization is removed from the WeakMap and may retry safely."
+    },
+    {
+      "id": "GD-006",
+      "severity": "P2",
+      "summary": "Predelivery responses did not explicitly forbid caching.",
+      "resolution": "Global no-store boundary added and tested."
+    }
+  ],
+  "open_defects": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 0
+  },
+  "release_gate": "HOLD_CONTENT_RIGHTS_CONTACT_PRICE_LEGAL_ADMIN_SCREEN_READER_DEPLOY_AUTHORITY",
+  "placement_stage": "REACHED_PREPARED_NOT_EXECUTED",
+  "external_effects": false,
+  "checkpoint_deployment": false,
+  "production": false,
+  "dns": false,
+  "custom_domain": false
+}

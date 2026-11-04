@@ -1,0 +1,22 @@
+{
+  "schema": "nsars-gate-b-cms-media-v1",
+  "evaluation_id": "NSARS-R5-2-GATE-B-CMS-MEDIA-001",
+  "evaluated_at": "2026-08-21",
+  "decision": "docs/governance/DECISION_R5_003_ZERO_REBUILD_AND_CONTENT.md",
+  "base_source_fingerprint": "c01545cb6161f931c07778914bc717fd3483cac4793071de3f7b4c34e5b165c9",
+  "status": "PASS_PRECODE_FOR_EXACT_CMS_MEDIA_AND_CONTENT_UPDATE",
+  "scope": [
+    "variable ordered blocks on the existing approved editorial templates",
+    "D1 media metadata and R2 private object uploads",
+    "Russian media library with default NOT_GRANTED rights",
+    "draft and protected-preview gallery mixed-slider and interactive-layout blocks",
+    "four-point normalized photo-window geometry with one to four windows",
+    "safe owner-content update with disputed facts held"
+  ],
+  "public_template_boundary": "EMPTY_OR_UNREADY_MEDIA_BLOCKS_RENDER_NOTHING_PUBLICLY",
+  "real_media": "NOT_AUTHORIZED_IN_THIS_COMMAND",
+  "checkpoint": "AUTHORIZED_PRIVATE_NOINDEX_AFTER_QA",
+  "custom_domain_dns": "DEFERRED",
+  "permanent_no_touch": ["ns-ars-production.ru", "*.ns-ars-production.ru"]
+}
+

@@ -1,0 +1,21 @@
+{
+  "schema": "nsars-slice-start-receipt-v1",
+  "start_id": "NSARS-SITES-CMS-SLICE-R5-START-001",
+  "started_at": "2026-08-21",
+  "command": {
+    "id": "NSARS-SITES-CMS-SLICE-R5-001",
+    "path": "docs/governance/slice-command.r5.json",
+    "sha256": "773215017fbaf5827b3eafd4d8b95c8ee854b33ffe880d349f6738c335e4b763"
+  },
+  "preflight": {
+    "checks": 13,
+    "failed": 0,
+    "p0": 0,
+    "p1": 0,
+    "result": "PASS"
+  },
+  "consumption": "CONSUMED_FOR_ONE_SOURCE_START",
+  "external_effects": false,
+  "checkpoint_deployment": false,
+  "runtime": "NOT_TESTED"
+}

@@ -1,0 +1,84 @@
+{
+  "schema": "nsars-source-slice-command-v1",
+  "Slice_Command_ID": "NSARS-SITES-CMS-SLICE-R5-001",
+  "issued_at": "2026-08-21",
+  "single_use": true,
+  "authority_basis": "CURRENT_USER_DELEGATION_RECORDED_IN_DECISION_R5_001",
+  "pins": {
+    "decision": {"path":"docs/governance/DECISION_R5_001.md","sha256":"1539808502bed48e69b35dcfb278af864c5af97cb7b05e7b43d2859477d5bc40"},
+    "ledger": {"path":"docs/governance/current-evidence-ledger.r5.json","sha256":"1b226fe72c7d940f820a5c57a8e71d044c38f0cb2c808d445493b5f07b9349d7"},
+    "gate_b": {"path":"docs/governance/gate-b-slice.r5.json","sha256":"d8acdad8bc3e75e3b839ca37b68b8f3d32e5577fa51fdeb3c30502efb8fda9da","required_status":"PASS_PRECODE_FOR_EXACT_NAMED_SITES_SLICE"},
+    "block_registry": {"path":"docs/contracts/block-registry.r5.json","sha256":"d66263d091dcedb23ae82bb255a0e0866248fb375cb2347653f8ecdae430e817"},
+    "page_schema": {"path":"docs/contracts/page-schema.r5.json","sha256":"4d6feaa7a8d9658230eb2a10ed9f6eb4422e8aa6ad87912c952364d71f41e593"},
+    "fixtures": {"path":"docs/contracts/fixture-manifest.r5.json","sha256":"ed2e2f040302907819b1729762bb1eb00523955d9ff25d7284bef774dba53e7a"},
+    "test_plan": {"path":"docs/contracts/test-master-plan.r5.md","sha256":"a9beb8918861113aa7d4da782d62271bd40e1f7cc773e835a8ce12b22e50415f"},
+    "hosting": {"path":".openai/hosting.json","sha256":"ea446920adaa0558850989b09776a1cf0ccdfabe567252cfee533a628f30dd6c"},
+    "lockfile": {"path":"package-lock.json","sha256":"283dbdf55081ff6e460baff80764f39f722f13a0720e1a5fa13153ea877051a5"},
+    "pre_source_tree_fingerprint": "9b77a7e6d237617977c5e4457c4d84df453e8f07da7c5e429aac337d501f75d8"
+  },
+  "identity": {
+    "implementation_version": "NSARS-SITES-CMS-SLICE@0.1.0",
+    "layout_algorithm_id": "NSARS-EDITORIAL-LAYOUT-R5-001",
+    "checkout": "/workspace/sites/ns-ars-pro-site"
+  },
+  "authorization": {
+    "source_writes": true,
+    "local_build": true,
+    "d1_synthetic_state": true,
+    "r2_synthetic_assets": true,
+    "internal_agent_preview": true,
+    "checkpoint_deployment": false,
+    "production": false,
+    "dns": false,
+    "custom_domain": false,
+    "external_network_calls_from_product": false,
+    "real_contact_delivery": false,
+    "real_personal_data": false,
+    "real_child_media": false,
+    "secrets": false,
+    "ns_ars_production_ru_mutation": false
+  },
+  "included_scope": [
+    "synthetic Home page using BR01 BR12 BR13 BR15 BR17",
+    "Russian admin shell",
+    "D1 draft persisted read-back",
+    "preview of the exact draft",
+    "validated immutable publish revision",
+    "active release pointer",
+    "rollback to a previous revision",
+    "server-side authorization boundary",
+    "disabled brief boundary with no storage",
+    "responsive and accessibility verification in internal preview"
+  ],
+  "explicit_exclusions": [
+    "all other public templates",
+    "real media upload",
+    "external video audio or AR",
+    "prices packages geography reviews or real claims",
+    "actual contact submission",
+    "checkpoint deployment staging production DNS and publication"
+  ],
+  "startup_preflight": {
+    "pinned_paths_and_hashes":"MUST_MATCH",
+    "gate_b_slice":"PASS",
+    "dependencies":"INSTALLED",
+    "d1_r2":"LOGICAL_BINDINGS_CONFIGURED",
+    "browser":"INTERNAL_AGENT_PREVIEW_ONLY_RUNTIME_EVIDENCE_PENDING",
+    "real_screen_reader":"DEFERRED_MANDATORY_STAGING_RELEASE_GATE",
+    "external_effects":"FORBIDDEN",
+    "target":"EXISTING_FRESH_SITES_CHECKOUT_WITH_ONLY_PRECODE_GOVERNANCE_CHANGES"
+  },
+  "exit": {
+    "production_build":"PASS",
+    "unit_contract_tests":"PASS",
+    "cms_e2e":"PASS_ON_SYNTHETIC_DATA",
+    "responsive":"PASS_REQUIRED",
+    "automated_accessibility":"PASS_REQUIRED",
+    "keyboard":"PASS_REQUIRED",
+    "no_external_effects":"PASS_REQUIRED",
+    "p0":0,
+    "p1":0,
+    "runtime_claim_limit":"NO_REAL_SCREEN_READER_NO_RELEASE_READY_CLAIM"
+  },
+  "command_state": "ISSUED_UNCONSUMED"
+}

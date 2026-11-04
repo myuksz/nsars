@@ -1,0 +1,103 @@
+{
+  "schema": "nsars-current-evidence-ledger-v1",
+  "ledger_id": "NSARS-SITE-R5-CURRENT-LEDGER-001",
+  "frozen_at": "2026-08-21",
+  "authority": {
+    "decision": "docs/governance/DECISION_R5_001.md",
+    "mode": "DELEGATED_PRE_RELEASE_DECISIONS",
+    "production_authority": false
+  },
+  "sources": [
+    {
+      "id": "ARCH-A1-R1",
+      "name": "NS-ARS_Composer_V2_Architecture_Pack_A1_R1.pdf",
+      "sha256": "c25ceae9a4a3ff7211d9bd08f5ef9c7e28b7035fccdbbf2bcb321d1e5743a2cf",
+      "status": "PRODUCED_PENDING_SERGEY_APPROVAL",
+      "r5_disposition": "DELEGATED_CONTRACT_BASE_WITH_PLATFORM_ADAPTATION"
+    },
+    {
+      "id": "VIS-STYLE-01",
+      "name": "style-board.png",
+      "sha256": "cd4159e6be4a022cb38aa39b6591a0d2594dd8ecfbac9d9bdbfff6aaa91c549e",
+      "status": "PRODUCED_NOT_DIRECTLY_APPROVED",
+      "r5_disposition": "DELEGATED_LAYOUT_REFERENCE_ONLY"
+    },
+    {
+      "id": "VIS-HOME-D",
+      "name": "home-desktop.png",
+      "sha256": "13a20938cfee36a395a374ed735af7ceef96d12ed7bd36a49c48cdee62962f7b",
+      "status": "PRODUCED_NOT_DIRECTLY_APPROVED",
+      "r5_disposition": "DELEGATED_LAYOUT_REFERENCE_ONLY_NO_MEDIA_OR_COPY_AUTHORITY"
+    },
+    {
+      "id": "VIS-HOME-M",
+      "name": "home-mobile.png",
+      "sha256": "a2b7545ee1bb0d8f088ae27f8f1b97aa80db8d3ba9ed6221db6f1d3ee208e661",
+      "status": "PRODUCED_NOT_DIRECTLY_APPROVED",
+      "r5_disposition": "DELEGATED_LAYOUT_REFERENCE_ONLY_NO_MEDIA_OR_COPY_AUTHORITY"
+    },
+    {
+      "id": "CMS-BOARD-01",
+      "name": "admin-board.png",
+      "sha256": "1df3de099e01c344b2789780ab149ea2ad25b237fa675b25e8d334f41719f23d",
+      "status": "PRODUCED_NOT_DIRECTLY_APPROVED",
+      "r5_disposition": "AUTHORING_REFERENCE_ONLY"
+    },
+    {
+      "id": "D05-APPROVAL-PACK",
+      "name": "NS-ARS_Composer_V2_R4.4_DRAFT-05_Approval_Pack.md",
+      "sha256": "fbdabe3e0f2c8a11aed9aeec22b88251760eefe83c77a705779903aa7c8ad519",
+      "status": "STATIC_QA_PASS_NOT_APPROVED_NOT_RUNTIME",
+      "r5_disposition": "BR18_AND_INTERACTION_REFERENCE"
+    },
+    {
+      "id": "D04-WFOLIO-KT",
+      "name": "wfolio_music_page_knowledge_transfer.r4.4-draft-04.json",
+      "sha256": "61112b46c775ea6aeecd312f111747bc42ca438b019e785fd2ae92c7af2082ee",
+      "status": "PRODUCED_QA_PASS_NOT_APPROVED_NOT_RUNTIME",
+      "r5_disposition": "FUNCTIONAL_RULES_ONLY_NO_UI_COPY_OR_CODE"
+    },
+    {
+      "id": "R43-DECISIONS",
+      "name": "NSARS_R4_3_DELEGATED_DECISIONS.json",
+      "sha256": "cecaacff98e98497b0b37912269c83e46a314ee63414693e2605fe889d28266a",
+      "status": "HISTORICAL_SLICE_DECISIONS",
+      "r5_disposition": "BUSINESS_POLICY_CARRIED_FORWARD"
+    },
+    {
+      "id": "R43-GATE-B",
+      "name": "NSARS_R4_3_GATE_B_SLICE_EVALUATION.json",
+      "sha256": "008bed32a8c753c55c85d400eabe31ec89a1ed244054386efb4deb262da72ce7",
+      "status": "PASS_FOR_OLD_EXACT_SLICE_ONLY",
+      "r5_disposition": "HISTORICAL_NOT_REUSED_AS_R5_GATE"
+    },
+    {
+      "id": "R43-COMMAND",
+      "name": "NSARS_UI_SLICE_COMMAND_R4_3_001.json",
+      "sha256": "a966c89e4ca86d8d667a38c225702b07a75a62b242406b8bf3a3437d999f4318",
+      "status": "ISSUED_UNCONSUMED_HARD_STOPPED",
+      "r5_disposition": "PRESERVED_NOT_MODIFIED_NOT_CONSUMED"
+    },
+    {
+      "id": "SITES-CHECKOUT",
+      "name": ".openai/hosting.json",
+      "sha256_before_bindings": "9b02cbd6e1db0525eb491a43abf8e8a68b7da20952e497cd84e400c1f69ec526",
+      "status": "READY_PRIVATE_SOURCE_CHECKOUT",
+      "r5_disposition": "EXACT_TARGET_FOR_NEW_SLICE"
+    }
+  ],
+  "separate_status_axes": {
+    "produced": true,
+    "static_qa": "SOURCE_DEPENDENT",
+    "approved_by_sergey": false,
+    "delegated_decision_accepted": true,
+    "verified_runtime": false,
+    "checkpoint_deployed": false,
+    "production_released": false
+  },
+  "permanent_no_touch": [
+    "ns-ars-production.ru",
+    "*.ns-ars-production.ru"
+  ],
+  "future_origin_only": "https://ns-ars.ru"
+}

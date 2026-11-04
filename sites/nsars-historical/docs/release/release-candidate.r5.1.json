@@ -1,0 +1,66 @@
+{
+  "schema": "nsars-release-candidate-v1",
+  "candidate_id": "NSARS-SITES-R5-1-SYNTHETIC-RC-001",
+  "created_at": "2026-08-21",
+  "target_origin": "https://ns-ars.ru",
+  "source_fingerprint": {
+    "algorithm": "sha256(sorted sha256 per in-scope file)",
+    "value": "c01545cb6161f931c07778914bc717fd3483cac4793071de3f7b4c34e5b165c9",
+    "command": "scripts/release-fingerprint.sh",
+    "scope_note": "docs/release is excluded so the signed handoff can reference the source fingerprint without recursion"
+  },
+  "state_axes": {
+    "PRODUCED": "PASS_FULL_SYNTHETIC_R5_1",
+    "QA_PASS": "PASS_INTERNAL_17_OF_17_PLUS_RUNTIME_MATRICES",
+    "APPROVED": "APPROVED_WITHIN_DELEGATED_SCOPE_NOT_DIRECT_SERGEY_APPROVAL",
+    "VERIFIED_RUNTIME": "PASS_INTERNAL_AGENT_PREVIEW_ONLY"
+  },
+  "candidate_class": "TECHNICAL_SYNTHETIC_RELEASE_CANDIDATE",
+  "public_release_state": "HOLD",
+  "placement_state": "HANDOFF_PREPARED_NOT_DEPLOYED",
+  "content_class": "SYNTHETIC_NO_PII_NO_REAL_MEDIA_NO_PRICES_NO_CONTACT_DELIVERY",
+  "build": {
+    "typescript": "PASS",
+    "eslint": "PASS",
+    "vinext_build": "PASS_5_OF_5",
+    "tests": "PASS_17_OF_17"
+  },
+  "runtime": {
+    "routes": "PASS_9_OF_9_PLUS_404",
+    "responsive": "PASS_54_OF_54",
+    "keyboard": "PASS_9_OF_9",
+    "cms": "PASS_9_OF_9_ACTIVE_R1",
+    "d1_source": "PASS_D1_ACTIVE_RELEASE",
+    "cms_revision_cycle": "PASS_REPRESENTATIVE_MULTIROUTE_E2E",
+    "checkpoint": "NOT_CREATED",
+    "production": "NOT_DEPLOYED",
+    "dns_tls_current_state": "NOT_VERIFIED_FOR_CUTOVER",
+    "real_screen_reader": "PENDING"
+  },
+  "bindings": {
+    "d1": "DB",
+    "r2": "BUCKET",
+    "r2_current_role": "RESERVED_NOT_REQUIRED_BY_SYNTHETIC_TEXT_RELEASE"
+  },
+  "release_boundaries": {
+    "robots": "DISALLOW_ALL",
+    "x_robots_tag": "NOINDEX",
+    "contact_api": "DISABLED_503_NO_BODY_PARSE",
+    "admin": "SIWC_PLUS_EXACT_ALLOWLIST_DEFAULT_DENY",
+    "cache": "NO_STORE",
+    "forbidden_host": "HTTP_421",
+    "checkpoint_authorized": false,
+    "custom_domain_authorized": false,
+    "dns_authorized": false,
+    "external_contact_authorized": false
+  },
+  "open_blocker_register": "docs/release/release-blockers.r5.1.json",
+  "placement_handoff": "docs/release/placement-handoff.r5.1.md",
+  "backup_rollback": "docs/release/backup-rollback-runbook.r5.1.md",
+  "gate_d": "docs/governance/gate-d-full-staging.r5.1.json",
+  "non_blocking_toolchain_warnings": [
+    "npm reports an inherited http-proxy config that a future npm major may stop accepting",
+    "Node reports the test loader flag as experimental"
+  ],
+  "next_authorized_action": "NONE_UNTIL_RELEASE_BLOCKERS_AND_EXPLICIT_CHECKPOINT_AUTHORITY"
+}

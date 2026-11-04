@@ -1,0 +1,35 @@
+{
+  "schema": "nsars-correction-command-v1",
+  "command_id": "NSARS-COMPOSER-R6-CORRECTION-001",
+  "authorized_at": "2026-08-23",
+  "base_commit": "d79603e843157c89cb89bccb1d0a9c87326be760",
+  "mode": ["FIX", "CMS_BUILD", "STAGING_QA"],
+  "scope": [
+    "route-isolated page editor",
+    "unsaved-change protection",
+    "single-panel page authoring",
+    "dynamic hidden page duplication",
+    "versioned typed navigation",
+    "public responsive overflow correction",
+    "public header brand correction",
+    "single semantic process numbering",
+    "regression and runtime QA"
+  ],
+  "input_evidence": [
+    {
+      "name": "composer-page-tabs.png",
+      "sha256": "b52ee16331f8377e5746e197ffdf6f46fa0f3f33ebacefd2af3382a6afa4f008"
+    },
+    {
+      "name": "composer-structure-rail.png",
+      "sha256": "2f1607c9450d5f00846ef34e6c76812a2df01823eaee18384707a10e797ae084"
+    }
+  ],
+  "hard_stops": [
+    "no deployment or production publication",
+    "no DNS, mail or access-policy change",
+    "no write to ns-ars-production.ru or any subdomain",
+    "no real contact delivery or child-media publication"
+  ],
+  "status": "AUTHORIZED_BY_DIRECT_USER_COMMAND"
+}

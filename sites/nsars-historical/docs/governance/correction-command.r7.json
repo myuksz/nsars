@@ -1,0 +1,33 @@
+{
+  "schema": "nsars-correction-command-v1",
+  "command_id": "NSARS-COMPOSER-R7-CORRECTION-001",
+  "authorized_at": "2026-08-23",
+  "base_commit": "f2c84653f8a08f155c3d707ec832c6ea7f034524",
+  "direct_user_command": "напиши промт для исправления и запусти его выполнение",
+  "mode": ["FIX", "CMS_BUILD", "STAGING_QA", "SAME_SITE_CORRECTION_RELEASE"],
+  "scope": [
+    "URL-backed page-editor section navigation",
+    "one rendered editor panel at a time",
+    "reload and browser-history restoration",
+    "active-section preservation across page tabs",
+    "semantic tab and tabpanel accessibility",
+    "automated contract tests",
+    "local authenticated runtime QA",
+    "same-site corrective checkpoint for https://ns-ars.ru"
+  ],
+  "master_prompt": "docs/governance/master-prompt-r7-admin-editor-navigation.md",
+  "supersedes_for_this_defect": "docs/governance/correction-command.r6.json",
+  "release_context": {
+    "prior_exact_origin_command": "выпуск R6 на `ns-ars.ru`",
+    "current_command_is_continuation": true,
+    "target_origin": "https://ns-ars.ru"
+  },
+  "hard_stops": [
+    "no DNS, mail, audience or access-policy change",
+    "no database migration or content rewrite",
+    "no write to ns-ars-production.ru or any subdomain",
+    "no Wfolio change",
+    "no real contact delivery or child-media publication"
+  ],
+  "status": "AUTHORIZED_BY_DIRECT_USER_COMMAND"
+}

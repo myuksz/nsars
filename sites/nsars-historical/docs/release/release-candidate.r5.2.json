@@ -1,0 +1,57 @@
+{
+  "schema": "nsars-release-candidate-v1",
+  "candidate_id": "NSARS-SITES-R5-2-OWNER-CONTENT-RC-001",
+  "created_at": "2026-08-21",
+  "target_origin": "https://ns-ars.ru",
+  "source_fingerprint": {
+    "algorithm": "sha256(sorted sha256 per in-scope file)",
+    "value": "a4b97e1cc0135e78d7e18f68cafd31a39de5711d58301d455766efe67eaab5a2",
+    "command": "scripts/release-fingerprint.sh",
+    "scope_note": "docs/release is excluded to avoid recursive signatures"
+  },
+  "state_axes": {
+    "PRODUCED": "PASS_OWNER_CONTENT_CMS_MEDIA_R5_2",
+    "QA_PASS": "PASS_INTERNAL_20_OF_20_PLUS_BUILD_LINT_TYPES",
+    "APPROVED": "AUTHORIZED_WITHIN_OWNER_DELEGATED_SCOPE",
+    "VERIFIED_RUNTIME": "PENDING_HOSTED_CHECKPOINT"
+  },
+  "candidate_class": "PRIVATE_NOINDEX_OWNER_REVIEW_CHECKPOINT",
+  "public_release_state": "HOLD",
+  "content_class": "ORIGINAL_OWNER_BASELINE_COPY_NO_REAL_CHILD_MEDIA_NO_PRICES_NO_CONTACT_DELIVERY",
+  "build": {
+    "typescript": "PASS",
+    "eslint": "PASS",
+    "vinext_build": "PASS_5_OF_5",
+    "tests": "PASS_20_OF_20"
+  },
+  "runtime_contract": {
+    "public_routes": 9,
+    "cms": "D1_DRAFT_PREVIEW_IMMUTABLE_PUBLISH_ROLLBACK",
+    "media": "R2_PRIVATE_ORIGINALS_PLUS_D1_METADATA",
+    "media_blocks": ["smart_gallery", "mixed_slider", "interactive_page_layout_1_TO_4_QUAD_WINDOWS"],
+    "admin": "SIWC_EXACT_ALLOWLIST_DEFAULT_DENY",
+    "indexing": "DISALLOW_ALL_PLUS_NOINDEX",
+    "contact_api": "DISABLED_503_NO_BODY_PARSE",
+    "cache": "NO_STORE",
+    "checkpoint_access": "CUSTOM_OWNER_ONLY"
+  },
+  "bindings": {
+    "d1": "DB",
+    "r2": "BUCKET",
+    "environment_revision_predeploy": 1,
+    "admin_allowlist": "CONFIGURED_TO_PROJECT_OWNER"
+  },
+  "placement": {
+    "checkpoint": "AUTHORIZED_PENDING_DEPLOYMENT",
+    "custom_domain": "NOT_ATTACHED",
+    "dns": "PRESERVED_AT_BEGET",
+    "mail": "PRESERVED",
+    "old_beget_public_html": "EMPTY"
+  },
+  "open_blocker_register": "docs/release/release-blockers.r5.2.json",
+  "non_blocking_toolchain_warnings": [
+    "npm reports an inherited http-proxy config that a future npm major may stop accepting",
+    "Node reports the test loader flag as experimental"
+  ],
+  "next_authorized_action": "DEPLOY_OWNER_ONLY_NOINDEX_CHECKPOINT"
+}

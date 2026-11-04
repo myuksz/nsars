@@ -1,0 +1,98 @@
+{
+  "schema": "nsars-release-blockers-v1",
+  "register_id": "NSARS-R5-1-RELEASE-BLOCKERS-001",
+  "as_of": "2026-08-21",
+  "target_origin": "https://ns-ars.ru",
+  "release_state": "HOLD",
+  "blockers": [
+    {
+      "id": "RB-01",
+      "severity": "HARD",
+      "area": "media_rights",
+      "status": "OPEN",
+      "need": "Approved public photo/video selection plus traceable rights and consent evidence, especially for minors.",
+      "closure": "Every public asset has an owner, permitted use, child/representative consent status, retention rule and final export."
+    },
+    {
+      "id": "RB-02",
+      "severity": "HARD",
+      "area": "commercial_terms",
+      "status": "OPEN",
+      "need": "Current package names, contents, prices, validity conditions and territory confirmed by the business owner.",
+      "closure": "One dated commercial source is approved and mapped to the packages page without unsupported claims."
+    },
+    {
+      "id": "RB-03",
+      "severity": "HARD",
+      "area": "contacts_and_delivery",
+      "status": "OPEN",
+      "need": "Public contact channels, verified recipients, form purpose, minimum fields, retention and failure routing.",
+      "closure": "Contact display and test delivery pass with no real lead emitted during preflight."
+    },
+    {
+      "id": "RB-04",
+      "severity": "HARD",
+      "area": "legal",
+      "status": "OPEN",
+      "need": "Verified business details and approved offer, privacy, consent and cookie texts applicable to the final feature set.",
+      "closure": "Legal owner approves exact rendered texts and every form/media behavior they cover."
+    },
+    {
+      "id": "RB-05",
+      "severity": "HARD",
+      "area": "admin_access",
+      "status": "OPEN",
+      "need": "Exact production administrator email allowlist.",
+      "closure": "NSARS_ADMIN_EMAILS is configured, one allowlisted login passes and one non-allowlisted login is denied."
+    },
+    {
+      "id": "RB-06",
+      "severity": "HARD",
+      "area": "accessibility",
+      "status": "OPEN",
+      "need": "Manual VoiceOver or NVDA navigation and real-device smoke test after final content is loaded.",
+      "closure": "No P0/P1 accessibility defect remains; headings, landmarks, menus, revision UI and final forms are operable."
+    },
+    {
+      "id": "RB-07",
+      "severity": "HARD",
+      "area": "backup_and_rollback",
+      "status": "OPEN_EXECUTION_STEP",
+      "need": "Remote D1 export, R2 inventory/export if used, prior deployment identifier and tested restore/rollback owner.",
+      "closure": "Pre-change backup hashes and rollback drill receipt are recorded before domain cutover."
+    },
+    {
+      "id": "RB-08",
+      "severity": "HARD",
+      "area": "hosting_runtime",
+      "status": "OPEN_EXECUTION_STEP",
+      "need": "Authorized hosted checkpoint with D1/R2 bindings, production-style SIWC and no public custom domain yet.",
+      "closure": "Checkpoint passes routes, CMS revision cycle, headers, noindex, logs and rollback; fingerprint matches this candidate."
+    },
+    {
+      "id": "RB-09",
+      "severity": "HARD",
+      "area": "domain_dns_tls",
+      "status": "OPEN_EXECUTION_STEP",
+      "need": "Read-only DNS/TLS baseline, approved exact record change plan, propagation window and rollback values for ns-ars.ru.",
+      "closure": "Exact origin serves the approved fingerprint over valid TLS; no forbidden origin is modified."
+    },
+    {
+      "id": "RB-10",
+      "severity": "HARD",
+      "area": "authority",
+      "status": "OPEN",
+      "need": "Explicit user authorization for checkpoint deployment and, separately, custom-domain/DNS cutover.",
+      "closure": "Authorization is recorded against the exact candidate fingerprint and exact target origin."
+    }
+  ],
+  "closed_by_current_build": [
+    "nine-route architecture",
+    "Russian CMS revision workflow",
+    "responsive matrix",
+    "internal navigation integrity",
+    "pre-release security and noindex",
+    "local D1 runtime",
+    "rollback at page-revision level"
+  ]
+}

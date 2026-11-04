@@ -1,0 +1,53 @@
+{
+  "schema": "nsars-current-evidence-ledger-v1",
+  "ledger_id": "NSARS-SITE-R7-CURRENT-LEDGER-001",
+  "frozen_at": "2026-08-23",
+  "supersedes": "docs/governance/current-evidence-ledger.r6.json",
+  "authority": {
+    "direct_user_command": "напиши промт для исправления и запусти его выполнение",
+    "command_record": "docs/governance/correction-command.r7.json",
+    "target_origin": "https://ns-ars.ru",
+    "production_authority": "SAME_SITE_CORRECTION_CONTINUATION"
+  },
+  "defect_reassessment": {
+    "r6_claim": "route-isolated one-panel editor",
+    "observed_hosted_runtime": "OLD_HASH_ANCHOR_LONG_DOCUMENT",
+    "disposition": "R6_HOSTED_BEHAVIOR_CLAIM_REJECTED_FOR_THIS_DEFECT",
+    "release_severity": "P1"
+  },
+  "implemented_contract": {
+    "route": "/admin/pages/{pageId}/?section={sectionId}",
+    "sections": ["page", "hero", "approach", "process", "media", "directions", "footer"],
+    "invalid_section_fallback": "page",
+    "simultaneous_editor_panels": 1,
+    "history": "PUSH_STATE_AND_POPSTATE",
+    "page_switch": "PRESERVE_ACTIVE_SECTION",
+    "data_model_change": false,
+    "migration_change": false
+  },
+  "verified_evidence": {
+    "eslint": "PASS",
+    "vinext_build": "PASS_5_OF_5",
+    "automated_tests": "PASS_24_OF_24",
+    "contract_tests": "PASS_14_OF_14",
+    "admin_section_sequence": "PASS_7_OF_7_EXACT_URL_ONE_TAB_ONE_PANEL",
+    "page_switch": "PASS_SECTION_PRESERVED_AND_H1_UPDATED",
+    "reload": "PASS_ACTIVE_SECTION_PRESERVED",
+    "browser_history": "PASS_BACK_AND_FORWARD",
+    "application_console": "PASS_NO_APPLICATION_ERRORS"
+  },
+  "state_axes": {
+    "produced": true,
+    "static_qa": "PASS",
+    "browser_qa": "PASS_LOCAL_AGENT_PREVIEW",
+    "approved_for_correction_scope": true,
+    "verified_hosted_runtime": false,
+    "checkpoint_deployed": false,
+    "production_released": false
+  },
+  "permanent_no_touch": [
+    "ns-ars-production.ru",
+    "*.ns-ars-production.ru"
+  ],
+  "external_effects_at_freeze": false
+}

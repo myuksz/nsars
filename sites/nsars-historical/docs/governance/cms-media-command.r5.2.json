@@ -1,0 +1,28 @@
+{
+  "schema": "nsars-cms-media-command-v1",
+  "Slice_Command_ID": "NSARS-CMS-MEDIA-R5-2-001",
+  "issued_at": "2026-08-21",
+  "authority_basis": "CURRENT_USER_COMMAND_DELETE_AND_CONTINUE_PLUS_DECISION_R5_003",
+  "base_source_fingerprint": "c01545cb6161f931c07778914bc717fd3483cac4793071de3f7b4c34e5b165c9",
+  "gate_b": "docs/governance/gate-b-cms-media.r5.2.json",
+  "block_registry": "docs/contracts/block-registry.r5.2.json",
+  "authorization": {
+    "source_writes": true,
+    "d1_schema_migration": true,
+    "r2_private_upload_flow": true,
+    "local_build_and_tests": true,
+    "private_noindex_checkpoint": true,
+    "real_child_media": false,
+    "public_indexing": false,
+    "custom_domain_dns": false,
+    "ns_ars_production_ru_mutation": false
+  },
+  "hard_stop": [
+    "no unapproved media can be delivered by the public media endpoint",
+    "no disputed price contact geography legal or AR claim is published",
+    "no DNS or custom-domain change",
+    "no writes to ns-ars-production.ru"
+  ],
+  "command_state": "ISSUED_FOR_ONE_CMS_MEDIA_CONTENT_UPDATE"
+}
+

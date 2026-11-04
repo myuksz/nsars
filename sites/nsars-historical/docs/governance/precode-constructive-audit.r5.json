@@ -1,0 +1,29 @@
+{
+  "schema": "nsars-precode-audit-receipt-v1",
+  "audit_id": "NSARS-R5-PRECODE-AUDIT-001",
+  "scope": "R5 exact Sites Home plus CMS slice; static contracts only",
+  "checks": [
+    {"id":"JSON-01","pass":true,"detail":"5 JSON documents parse"},
+    {"id":"BR-01","pass":true,"detail":"block ids unique"},
+    {"id":"BR-02","pass":true,"detail":"block types unique"},
+    {"id":"BR-03","pass":true,"detail":"BR01-BR18 registered"},
+    {"id":"BR-04","pass":true,"detail":"slice enabled: BR01,BR12,BR13,BR15,BR17"},
+    {"id":"BR-05","pass":true,"detail":"raw code forbidden"},
+    {"id":"FX-01","pass":true,"detail":"SYNTHETIC_NO_PII_NO_REAL_MEDIA"},
+    {"id":"FX-02","pass":true,"detail":"external effects false"},
+    {"id":"FX-03","pass":true,"detail":"wrong host negative fixture present"},
+    {"id":"HOST-01","pass":true,"detail":"D1 and R2 logical bindings set"},
+    {"id":"HOST-02","pass":true,"detail":"hosting manifest contains only allowed keys"},
+    {"id":"AUTH-01","pass":true,"detail":"deployment remains forbidden"},
+    {"id":"AUTH-02","pass":true,"detail":"protected origin no-touch recorded"},
+    {"id":"AUTH-03","pass":true,"detail":"screen-reader release gate retained"}
+  ],
+  "total": 14,
+  "passed": 14,
+  "failed": 0,
+  "p0": 0,
+  "p1": 0,
+  "runtime": "NOT_TESTED",
+  "authorization_effect": "NONE",
+  "result": "PASS"
+}

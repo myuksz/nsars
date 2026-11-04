@@ -1,0 +1,31 @@
+{
+  "schema": "nsars-block-registry-v1",
+  "registry_id": "NSARS-BLOCK-REGISTRY-R5-1-001",
+  "schema_version": "1.1.0-rc.1",
+  "raw_html_css_js": "FORBIDDEN",
+  "full_synthetic_build": {
+    "enabled": ["BR01", "BR12", "BR13", "BR15", "BR17"],
+    "route_count": 9,
+    "data_class": "SYNTHETIC_NO_PII_NO_REAL_MEDIA_NO_PRICES_NO_CONTACTS"
+  },
+  "blocks": [
+    {"id":"BR01","type":"nsars.hero","status":"FULL_SYNTHETIC_ENABLED","fields":["eyebrow","title","accent","body","primaryCta","secondaryCta","visualMode"]},
+    {"id":"BR02","type":"nsars.direction_selector","status":"DEFERRED_SPECIALIZED_RENDERER","fields":["heading","items"]},
+    {"id":"BR03","type":"nsars.entity_listing","status":"DEFERRED_SPECIALIZED_RENDERER","fields":["heading","intro","items","filterMode"]},
+    {"id":"BR04","type":"nsars.album_viewer","status":"HOLD_RIGHTS_MEDIA","fields":["media","chapters","captions"]},
+    {"id":"BR05","type":"nsars.smart_gallery","status":"HOLD_RIGHTS_MEDIA","fields":["media","layout","density","lightbox"]},
+    {"id":"BR06","type":"nsars.mixed_slider","status":"POST_FULL_SYNTHETIC","fields":["slides","framePolicy","captions","controls","responsiveOverrides"]},
+    {"id":"BR07","type":"nsars.person_story","status":"HOLD_RIGHTS_CLAIMS","fields":["heading","body","media","evidence"]},
+    {"id":"BR08","type":"nsars.group_story","status":"HOLD_RIGHTS_CLAIMS","fields":["heading","body","media","evidence"]},
+    {"id":"BR09","type":"nsars.sticky_story","status":"DEFERRED_SPECIALIZED_RENDERER","fields":["chapters","theme"]},
+    {"id":"BR10","type":"nsars.av_evidence","status":"BLOCKED_EXTERNAL_MEDIA_GATE","fields":["provider","sourceUrl","poster","title","fallback","rights"]},
+    {"id":"BR11","type":"nsars.review_cta","status":"HOLD_REVIEW_RIGHTS","fields":["quote","source","permission","cta"]},
+    {"id":"BR12","type":"nsars.rich_text","status":"FULL_SYNTHETIC_ENABLED","fields":["kicker","heading","body","alignment"]},
+    {"id":"BR13","type":"nsars.process","status":"FULL_SYNTHETIC_ENABLED","fields":["heading","steps"]},
+    {"id":"BR14","type":"nsars.evidence","status":"DEFERRED_SPECIALIZED_RENDERER","fields":["heading","items"]},
+    {"id":"BR15","type":"nsars.related","status":"FULL_SYNTHETIC_ENABLED","fields":["heading","items"]},
+    {"id":"BR16","type":"nsars.brief","status":"SYNTHETIC_ONLY_FORM_DISABLED","fields":["heading","intro","fields","submitState"]},
+    {"id":"BR17","type":"nsars.footer","status":"FULL_SYNTHETIC_ENABLED","fields":["brand","navigation","legalStatus"]},
+    {"id":"BR18","type":"nsars.interactive_page_layout","status":"REGISTERED_NOT_PUBLIC","fields":["backgroundMedia","photoWindows","draftPoints","quad","lastValidQuad","lastValidAgainstSha256","intervalSeconds","accessibleName","responsiveOverrides"]}
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "nsars-release-candidate-v1",
+  "candidate_id": "NSARS-SITES-R7-EDITOR-NAVIGATION-RC-002",
+  "created_at": "2026-08-23",
+  "target_origin": "https://ns-ars.ru",
+  "supersedes": "docs/release/release-candidate.r7.json",
+  "reason": "The prior Sites deployment succeeded but exact-origin browser inspection still served the R5 hash-anchor runtime.",
+  "source_fingerprint": {
+    "algorithm": "sha256(sorted sha256 per in-scope file)",
+    "value": "ea86210de9c4c80e8f5919c10a51bbb8fb8953c59d3b9465ebde56a78b485a32",
+    "command": "scripts/release-fingerprint.sh",
+    "scope_note": "docs/release is excluded to avoid recursive signatures"
+  },
+  "verification_marker": {
+    "selector": ".admin-shell[data-admin-release]",
+    "expected": "R7.1"
+  },
+  "build": {
+    "eslint": "PASS",
+    "contract_tests": "PASS_14_OF_14",
+    "checkpoint_build": "PENDING"
+  },
+  "database_change": false,
+  "migration_change": false,
+  "content_change": false,
+  "required_release_evidence": [
+    "terminal Sites deployment status",
+    "exact https://ns-ars.ru authenticated browser marker R7.1",
+    "exact-origin page route returns the editor rather than custom 404",
+    "one active tabpanel and no R5 hash-anchor structure links"
+  ],
+  "status": "READY_FOR_CORRECTIVE_CHECKPOINT"
+}

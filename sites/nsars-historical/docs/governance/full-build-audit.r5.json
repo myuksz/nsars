@@ -1,0 +1,18 @@
+{
+  "schema": "nsars-precode-full-audit-v1",
+  "audit_id": "NSARS-R5-FULL-SYNTHETIC-AUDIT-001",
+  "audited_at": "2026-08-21",
+  "checks": [
+    {"id":"F01","status":"PASS","finding":"Nine exact public routes are registered."},
+    {"id":"F02","status":"PASS","finding":"Only BR01/BR12/BR13/BR15/BR17 may render in the full synthetic build."},
+    {"id":"F03","status":"PASS","finding":"Real media, child data, prices, geography, reviews, contact data and real claims remain forbidden."},
+    {"id":"F04","status":"PASS","finding":"Every route receives independent draft/revision/active-pointer state."},
+    {"id":"F05","status":"PASS","finding":"Admin remains SIWC plus allowlist with local-only explicit bypass."},
+    {"id":"F06","status":"PASS","finding":"Brief remains disabled and body is not parsed or stored."},
+    {"id":"F07","status":"PASS","finding":"No deployment, DNS or custom-domain action is authorized."},
+    {"id":"F08","status":"PASS","finding":"Separate produced, QA, approval and runtime axes remain mandatory."}
+  ],
+  "p0": 0,
+  "p1": 0,
+  "recommendation": "ISSUE_EXACT_FULL_SYNTHETIC_SOURCE_COMMAND"
+}

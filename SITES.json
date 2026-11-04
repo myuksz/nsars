@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-11-04",
+  "repository": "myuksz/nsars",
+  "projects": [
+    {
+      "key": "ns-ars-pro-site",
+      "path": "sites/nsars-historical",
+      "title": "Историческая версия NS-ARS",
+      "source_project_id": "appgprj_6a888639addc8191ae0f6450d0ded42e",
+      "source_commit": "8c88f028ea8ef2aec93e08c4de00c8a07e2ea70c",
+      "saved_version": 7,
+      "source_matches_latest_saved_version": true,
+      "reference_url": "https://ns-ars.ru",
+      "status": "source_snapshot_verified",
+      "note": "Историческая версия от 30.08.2026. Не является текущим сайтом Beget. Включает CMS и маршрут «О нас»."
+    },
+    {
+      "key": "nsars-beget-recovered",
+      "path": "sites/nsars-beget-recovered",
+      "title": "Основной сайт на Beget — найденный фрагмент",
+      "status": "INCOMPLETE_NOT_RUNNABLE",
+      "baseline_date": "2026-10-29",
+      "source_archive_sha256": "e50c1a530e460b068a7b5d7f112df41c51818e75ae17aa1bbd01d533cd73a3c2",
+      "missing_import_count": 15,
+      "note": "Включает раздел «О нас», но нет ряда обязательных исходников, рабочей БД и медиа. Текущая версия Beget не подтверждена."
+    }
+  ],
+  "scope": "ns-ars.ru only"
+}

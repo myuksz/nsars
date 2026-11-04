@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1787333863747,
+      "tag": "0000_hot_dakota_north",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1787340392903,
+      "tag": "0001_chemical_spitfire",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1787471643176,
+      "tag": "0002_tricky_dracula",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1788095923014,
+      "tag": "0003_fantastic_agent_zero",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1788099993686,
+      "tag": "0004_cynical_natasha_romanoff",
+      "breakpoints": true
+    }
+  ]
+}

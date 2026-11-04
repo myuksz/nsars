@@ -1,0 +1,15 @@
+{
+  "schema": "nsars-full-build-start-receipt-v1",
+  "start_id": "NSARS-SITES-FULL-SYNTHETIC-R5-START-001",
+  "started_at": "2026-08-21",
+  "command_id": "NSARS-SITES-FULL-SYNTHETIC-R5-001",
+  "preflight": {
+    "pins_match": "PASS",
+    "gate_b_exact_scope": "PASS",
+    "slice_gate_c_functional": "PASS",
+    "d1_runtime": "PASS_INTERNAL_PREVIEW",
+    "external_effects": "FORBIDDEN_CONFIRMED",
+    "target_checkout": "/workspace/sites/ns-ars-pro-site"
+  },
+  "result": "SOURCE_START_AUTHORIZED"
+}

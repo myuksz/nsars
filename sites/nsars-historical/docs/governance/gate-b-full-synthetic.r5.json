@@ -1,0 +1,10 @@
+{
+  "schema": "nsars-gate-b-full-synthetic-v1",
+  "evaluation_id": "NSARS-R5-GATE-B-FULL-SYNTHETIC-001",
+  "evaluated_at": "2026-08-21",
+  "status": "PASS_PRECODE_FOR_EXACT_FULL_SYNTHETIC_BUILD",
+  "public_real_content_gate": "HOLD_RIGHTS_PRICE_CONTACT_LEGAL",
+  "checkpoint_deployment": "FORBIDDEN",
+  "production": "FORBIDDEN",
+  "reason": "The exact full route/CMS build is bounded to synthetic no-PII no-real-media content and preserves every release blocker."
+}

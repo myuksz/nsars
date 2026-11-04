@@ -1,0 +1,44 @@
+{
+  "schema": "nsars-gate-b-slice-evaluation-v1",
+  "evaluation_id": "NSARS-R5-GATE-B-SLICE-001",
+  "evaluated_at": "2026-08-21",
+  "scope": "Exact private source and agent-preview slice: synthetic Home plus Russian admin draft/preview/publish/rollback on the Sites checkout.",
+  "pins": {
+    "decision": {"path":"docs/governance/DECISION_R5_001.md","sha256":"1539808502bed48e69b35dcfb278af864c5af97cb7b05e7b43d2859477d5bc40"},
+    "ledger": {"path":"docs/governance/current-evidence-ledger.r5.json","sha256":"1b226fe72c7d940f820a5c57a8e71d044c38f0cb2c808d445493b5f07b9349d7"},
+    "block_registry": {"path":"docs/contracts/block-registry.r5.json","sha256":"d66263d091dcedb23ae82bb255a0e0866248fb375cb2347653f8ecdae430e817"},
+    "page_schema": {"path":"docs/contracts/page-schema.r5.json","sha256":"4d6feaa7a8d9658230eb2a10ed9f6eb4422e8aa6ad87912c952364d71f41e593"},
+    "fixtures": {"path":"docs/contracts/fixture-manifest.r5.json","sha256":"ed2e2f040302907819b1729762bb1eb00523955d9ff25d7284bef774dba53e7a"},
+    "test_plan": {"path":"docs/contracts/test-master-plan.r5.md","sha256":"a9beb8918861113aa7d4da782d62271bd40e1f7cc773e835a8ce12b22e50415f"},
+    "constructive_audit": {"path":"docs/governance/precode-constructive-audit.r5.json","sha256":"4bf75d0d00afb72a8c875c76cd22bd8a5a0a0e522868db876dbfc4fe2fe015a4","result":"PASS"},
+    "adversarial_audit": {"path":"docs/governance/precode-adversarial-audit.r5.json","sha256":"856da58e0662ea7f0338b8e3a118d01054fcfb38ee64676a359198f1b0c8078f","result":"PASS"},
+    "hosting": {"path":".openai/hosting.json","sha256":"ea446920adaa0558850989b09776a1cf0ccdfabe567252cfee533a628f30dd6c"},
+    "package": {"path":"package.json","sha256":"e7ac1cff7b4b5f91d3c7e662741dc50ac5d021b9983862d4c531cc79379415d9"},
+    "lockfile": {"path":"package-lock.json","sha256":"283dbdf55081ff6e460baff80764f39f722f13a0720e1a5fa13153ea877051a5"}
+  },
+  "toolchain": {
+    "node":"v24.19.0",
+    "next":"16.2.6",
+    "react":"19.2.6",
+    "vinext":"0.0.50",
+    "drizzle_orm":"0.45.2",
+    "wrangler":"4.92.0"
+  },
+  "evaluation": {
+    "versioned_contracts":"PASS",
+    "current_evidence_ledger":"PASS",
+    "public_desktop_mobile_reference":"PASS_WITH_DELEGATED_LAYOUT_SCOPE_ONLY",
+    "composer_authoring_evidence":"PASS_AS_INTERACTION_REFERENCE_ONLY",
+    "test_plan_and_fixtures":"PASS",
+    "security_privacy_publish_boundaries":"PASS_FOR_SYNTHETIC_SLICE",
+    "exact_slice_charter":"PASS",
+    "constructive_audit":"PASS_14_OF_14",
+    "adversarial_audit":"PASS_9_OF_9",
+    "runtime":"NOT_TESTED"
+  },
+  "aggregate": {"p0":0,"p1":0,"p2":0},
+  "gate_b_slice": "PASS_PRECODE_FOR_EXACT_NAMED_SITES_SLICE",
+  "gate_b_full": "HOLD_UNTIL_SLICE_GATE_C_AND_FULL_PUBLIC_TEMPLATE_EVIDENCE",
+  "authorization_effect": "ELIGIBLE_FOR_SEPARATE_EXACT_SOURCE_COMMAND_ONLY",
+  "does_not_authorize": ["checkpoint deployment","production","DNS","custom domain","external contact delivery","real PII","real child media","public claims","ns-ars-production.ru mutation"]
+}

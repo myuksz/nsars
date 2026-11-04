@@ -1,0 +1,24 @@
+{
+  "schema": "nsars-adversarial-precode-audit-v1",
+  "audit_id": "NSARS-R5-PRECODE-ADVERSARIAL-001",
+  "scope": "R5 exact Sites Home plus CMS slice; static contracts only",
+  "checks": [
+    {"id":"DUP-current-evidence-ledger.r5.json","pass":true},
+    {"id":"DUP-block-registry.r5.json","pass":true},
+    {"id":"DUP-page-schema.r5.json","pass":true},
+    {"id":"DUP-fixture-manifest.r5.json","pass":true},
+    {"id":"DUP-hosting.json","pass":true},
+    {"id":"ADV-TYPE-REGISTRY-PARITY","pass":true},
+    {"id":"ADV-RAW-CODE-PROPERTY-BLOCK","pass":true},
+    {"id":"ADV-NO-STATUS-INFLATION","pass":true},
+    {"id":"ADV-NO-CREDENTIALS-IN-HOSTING","pass":true}
+  ],
+  "total": 9,
+  "passed": 9,
+  "failed": 0,
+  "p0": 0,
+  "p1": 0,
+  "runtime": "NOT_TESTED",
+  "authorization_effect": "NONE",
+  "result": "PASS"
+}

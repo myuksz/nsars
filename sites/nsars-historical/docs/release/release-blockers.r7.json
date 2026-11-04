@@ -1,0 +1,31 @@
+{
+  "schema": "nsars-release-blockers-v1",
+  "register_id": "NSARS-R7-RELEASE-BLOCKERS-001",
+  "frozen_at": "2026-08-23",
+  "candidate_id": "NSARS-SITES-R7-EDITOR-NAVIGATION-RC-001",
+  "corrective_release_state": "READY_FOR_CHECKPOINT",
+  "blocking_before_checkpoint": [],
+  "required_after_checkpoint": [
+    {
+      "id": "R7-B01",
+      "summary": "Authoritative Sites deployment status must be terminal succeeded with its production URL.",
+      "owner": "RELEASE",
+      "exit_evidence": "Direct main-conversation deployment-status response."
+    },
+    {
+      "id": "R7-B02",
+      "summary": "Owner-session smoke must confirm the refreshed custom-domain editor is no longer the old hash-anchor document.",
+      "owner": "SERGEY_AND_RELEASE",
+      "exit_evidence": "One active editor panel after hard refresh on https://ns-ars.ru/admin/."
+    }
+  ],
+  "outside_this_correction": [
+    "Real content, child-media rights, contacts, prices and final legal copy",
+    "Public launch and indexing",
+    "DNS, mail and access-policy changes"
+  ],
+  "not_blocking_internal_candidate": [
+    "Inherited npm http-proxy deprecation warning",
+    "Node experimental-loader warning in the test harness"
+  ]
+}

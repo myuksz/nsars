@@ -1,0 +1,61 @@
+{
+  "schema": "nsars-site-cms-contract-v1",
+  "contract_id": "NSARS-SITE-CMS-R6-001",
+  "created_at": "2026-08-23",
+  "supersedes_ui_model": "single-long-page-editor-with-anchor-tabs",
+  "work_areas": {
+    "pages": "/admin/pages/{pageId}/",
+    "navigation": "/admin/menu/",
+    "media": "/admin/media/"
+  },
+  "page_editor": {
+    "route_isolation": true,
+    "one_page_per_url": true,
+    "one_section_visible_at_a_time": true,
+    "unsaved_navigation_choices": [
+      "SAVE_AND_GO",
+      "GO_WITHOUT_SAVING",
+      "STAY"
+    ],
+    "browser_back_forward_guard": true,
+    "page_route_immutable_after_creation": true
+  },
+  "page_creation": {
+    "method": "DUPLICATE_CURRENT",
+    "new_page_state": "DRAFT_HIDDEN",
+    "public_visibility_default": false,
+    "active_revision_default": null,
+    "automatic_menu_insertion": false,
+    "automatic_sitemap_insertion": false,
+    "reserved_routes_rejected": true,
+    "unique_route_required": true
+  },
+  "public_visibility": {
+    "separate_from_revision_publish": true,
+    "requires_active_revision_when_enabling": true,
+    "hidden_page_public_response": 404
+  },
+  "navigation": {
+    "typed_target": "pageId",
+    "placements": ["primary", "age", "footer"],
+    "draft_versioning": true,
+    "immutable_revisions": true,
+    "active_pointer_rollback": true,
+    "hidden_or_unpublished_targets_filtered_publicly": true
+  },
+  "public_presentation": {
+    "common_nsars_header_mark": "REMOVED",
+    "decorative_section_numbering": "REMOVED",
+    "semantic_process_numbering": "01_TO_04_RETAINED",
+    "horizontal_document_clipping": "FORBIDDEN",
+    "menu_wrapping": "REQUIRED"
+  },
+  "storage_additions": [
+    "page_settings",
+    "navigation_state",
+    "navigation_revisions",
+    "active_navigation"
+  ],
+  "raw_html_css_js": "FORBIDDEN",
+  "release_boundary": "NO_DEPLOYMENT_WITHOUT_SEPARATE_COMMAND"
+}

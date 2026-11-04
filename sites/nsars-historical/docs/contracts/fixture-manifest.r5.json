@@ -1,0 +1,29 @@
+{
+  "schema": "nsars-fixture-manifest-v1",
+  "fixture_set_id": "NSARS-SITES-SLICE-R5-FIXTURES-001",
+  "data_class": "SYNTHETIC_NO_PII_NO_REAL_MEDIA",
+  "positive": [
+    "home_seed_valid",
+    "draft_update_valid",
+    "preview_exact_draft",
+    "publish_creates_immutable_revision",
+    "rollback_switches_active_pointer",
+    "mobile_override_inherit_and_reset",
+    "disabled_brief_never_accepts"
+  ],
+  "negative": [
+    "unknown_block_type_rejected",
+    "raw_html_rejected",
+    "missing_seo_rejected",
+    "unapproved_media_rejected",
+    "disabled_form_rejected_without_storage",
+    "unauthenticated_admin_rejected",
+    "non_allowlisted_admin_rejected",
+    "stale_revision_publish_rejected",
+    "external_network_target_rejected",
+    "wrong_production_host_rejected"
+  ],
+  "viewport_matrix": [320,360,390,768,1024,1440],
+  "public_candidate_forbidden_terms": ["PLACEHOLDER","MISSING","КОНЦЕПТ","/workspace","/root","file:///"],
+  "external_effects": false
+}

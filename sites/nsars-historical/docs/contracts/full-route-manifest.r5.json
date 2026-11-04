@@ -1,0 +1,19 @@
+{
+  "schema": "nsars-full-route-manifest-v1",
+  "manifest_id": "NSARS-FULL-SYNTHETIC-ROUTES-R5-001",
+  "routes": [
+    {"page_id":"page_home","route":"/","template":"home","public_label":"Главная"},
+    {"page_id":"page_kindergarten","route":"/albums/kindergarten/","template":"direction_kindergarten","public_label":"Детский сад"},
+    {"page_id":"page_grade4","route":"/albums/grade-4/","template":"direction_grade4","public_label":"4 класс"},
+    {"page_id":"page_highschool","route":"/albums/high-school/","template":"direction_highschool","public_label":"Старшая школа"},
+    {"page_id":"page_gallery","route":"/gallery/","template":"works","public_label":"Работы"},
+    {"page_id":"page_prices","route":"/prices/","template":"packages","public_label":"Комплектации"},
+    {"page_id":"page_about","route":"/about/","template":"about","public_label":"О нас"},
+    {"page_id":"page_contacts","route":"/contacts/","template":"contacts_disabled","public_label":"Контакты"},
+    {"page_id":"page_legal","route":"/legal/","template":"legal_status","public_label":"Правовой статус"}
+  ],
+  "system_routes": ["/admin", "/preview", "/api/brief", "/sitemap.xml", "/robots.txt"],
+  "not_found": "CUSTOM_REQUIRED",
+  "indexing": "NOINDEX_UNTIL_PLACEMENT",
+  "canonical": null
+}
