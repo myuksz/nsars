@@ -23,7 +23,19 @@
       "source_archive_sha256": "e50c1a530e460b068a7b5d7f112df41c51818e75ae17aa1bbd01d533cd73a3c2",
       "missing_import_count": 15,
       "note": "Включает раздел «О нас», но нет ряда обязательных исходников, рабочей БД и медиа. Текущая версия Beget не подтверждена."
+    },
+    {
+      "key": "nsars-zapis-preview",
+      "path": "sites/booking",
+      "title": "Бронирование даты съёмки",
+      "source_project_id": "appgprj_6ae2c9fee37481919184ad45f666661a",
+      "source_commit": "b195dd3cc1d55cc8244a61e855095b2b407cecee",
+      "saved_version": 12,
+      "source_matches_latest_saved_version": true,
+      "reference_url": "https://nsars-zapis-preview.myukszzz.chatgpt.site",
+      "status": "source_snapshot_verified",
+      "note": "Последний сохранённый исходный commit подтверждён; сборка и действующий runtime в этой операции не проверялись."
     }
   ],
-  "scope": "ns-ars.ru only"
+  "scope": "ns-ars.ru and explicitly authorized booking prototype only"
 }

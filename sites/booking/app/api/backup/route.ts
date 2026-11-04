@@ -1,0 +1,5 @@
+import {database,owner} from '../../booking-server';
+import {backupStatus,snapshot,syncBackup} from '../../backup';
+export const dynamic='force-dynamic';
+export async function GET(req:Request){const db=await database();if(!await owner(db))return Response.json({error:'Требуется вход владельца'},{status:401});const data=await snapshot(db);return new Response((new URL(req.url).searchParams.get('view')==='client'?data.publicBytes:data.bytes) as BodyInit,{headers:{'Content-Type':'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet','Content-Disposition':'attachment; filename="NS-ARS-bookings.xlsx"','Cache-Control':'no-store'}});}
+export async function POST(req:Request){if(req.headers.get('origin')&&req.headers.get('origin')!==new URL(req.url).origin)return Response.json({error:'Недопустимый источник запроса'},{status:403});const db=await database();if(!await owner(db))return Response.json({error:'Требуется вход владельца'},{status:401});await syncBackup(db,true);return Response.json({backup:await backupStatus(db)},{headers:{'Cache-Control':'no-store'}});}

@@ -11,24 +11,45 @@
       "project": "nsars-beget-recovered",
       "path": "lib/moscow/data.mjs",
       "change": "direct contact details replaced/removed"
+    },
+    {
+      "project": "nsars-zapis-preview",
+      "path": "INTEGRATIONS.md",
+      "change": "notification email replaced by non-deliverable example"
+    },
+    {
+      "project": "nsars-zapis-preview",
+      "path": "app/notifications.ts",
+      "change": "notification email replaced by non-deliverable example"
+    },
+    {
+      "project": "nsars-zapis-preview",
+      "path": "tests/integrations.test.mjs",
+      "change": "notification email replaced by non-deliverable example"
+    },
+    {
+      "project": "nsars-zapis-preview",
+      "path": "app/data/booking-seed.json",
+      "change": "all actual calendar records and notes excluded"
     }
   ],
   "source_history_copied": false,
   "live_site_or_hosting_changed": false,
   "builds_tested": false,
   "validation": {
-    "source_versions_match": 1,
+    "source_versions_match": 2,
     "historical_cms_contract_tests": {
       "pass": 17,
       "fail": 0
     },
     "beget_syntax_errors": [],
     "local_import_audit": {
-      "sites/nsars-historical": []
+      "sites/nsars-historical": [],
+      "sites/booking": []
     },
     "secret_and_file_type_guard": "PASS",
     "full_builds_and_browser_tests": "NOT_RUN",
     "production_or_notifications": "NOT_TESTED"
   },
-  "scope": "ns-ars.ru only; other projects are not committed to the public branch"
+  "scope": "ns-ars.ru and explicitly authorized booking prototype only; no other projects"
 }

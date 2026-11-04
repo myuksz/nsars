@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "periodStart": "2026-09-08",
+  "periodEnd": "2027-02-28",
+  "yearCorrectionAuthorized": true,
+  "records": [],
+  "importNotes": [
+    "Public source snapshot: actual booking calendar and client notes excluded. Import private data separately."
+  ]
+}

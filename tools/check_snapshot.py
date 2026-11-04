@@ -18,6 +18,8 @@ for p in root.rglob('*'):
  except UnicodeDecodeError:continue
  for pattern in secret_patterns:
   if re.search(pattern,t):errors.append(rel+': possible secret')
+seed=json.loads((root/'sites/booking/app/data/booking-seed.json').read_text())
+if seed.get('records'):errors.append('actual booking seed is not empty')
 reg=json.loads((root/'SITES.json').read_text())
 for project in reg['projects']:
  path=project.get('path')

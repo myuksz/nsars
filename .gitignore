@@ -17,3 +17,6 @@
 *.key
 *.log
 .DS_Store
+
+!sites/booking/app/data/
+!sites/booking/app/data/booking-seed.json

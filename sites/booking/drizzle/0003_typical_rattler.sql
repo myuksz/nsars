@@ -1,0 +1,1 @@
+ALTER TABLE `booking_backup_state` ADD `public_sha` text DEFAULT '' NOT NULL;
